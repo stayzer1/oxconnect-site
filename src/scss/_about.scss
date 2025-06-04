@@ -1,0 +1,32 @@
+.about {
+  background-color: #cff665;
+  .container {
+    background-color: #fff;
+    padding-bottom: 70px;
+  }
+}
+.about__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.about__item {
+  border: 2.85px solid #cff665;
+  border-radius: 28px;
+  background: #8f8f8f;
+  padding: 48px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 240px;
+  max-width: 480px;
+}
+.about__item--title {
+}
+.about__item--text {
+  font: 500 27px / 90% "Helvetica";
+  letter-spacing: -0.03em;
+  color: #cff665;
+}

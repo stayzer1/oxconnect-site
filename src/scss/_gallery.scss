@@ -1,0 +1,29 @@
+.gallery {
+  padding: 55px 0;
+  background-color: #cff665;
+  position: relative;
+}
+.gallery__marquee {
+  position: relative;
+  z-index: 2;
+}
+.left-to-right {
+  padding-top: 15px;
+}
+.container-background {
+  width: 100%;
+  background-color: #fff;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  padding: 0 !important;
+  max-width: 1220px;
+}
+.gallery__marquee--items {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 19px;
+}

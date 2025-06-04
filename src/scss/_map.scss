@@ -1,0 +1,239 @@
+.map {
+  background-color: #cff665;
+  .container {
+    background-color: #fff;
+  }
+}
+.map__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 530px;
+}
+.map__image {
+  max-width: 980px;
+  margin: 0 auto;
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+.map__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 50px;
+}
+.map__item {
+  border: 3px solid #8f8f8f;
+  border-radius: 20px;
+  // transform: rotate(-90deg);
+  width: 180px;
+  height: 450px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.general-partner {
+}
+.map__item--title {
+  position: absolute;
+  bottom: 150px;
+  left: -80px;
+  font: 500 50px / 80% "Helvetica";
+  letter-spacing: -0.1em;
+  transform: rotate(-90deg);
+  width: 330px;
+}
+.general-partner--title {
+  color: #cff665;
+}
+.general-partner:hover {
+  background-color: #cff665;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  .general-partner--title {
+    color: #fff;
+  }
+}
+.diamond-partner:hover {
+  background-color: #51e7d0;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  .diamond-partner--title {
+    color: #fff;
+  }
+}
+.platinum-hookah-partner:hover {
+  background-color: #f237a8;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  .platinum-hookah-partner--title {
+    color: #fff;
+  }
+}
+.platinum-terrace-partner:hover {
+  background-color: #3180ff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  .platinum-terrace-partner--title {
+    color: #fff;
+  }
+}
+.gold-partner:hover {
+  background-color: #ff4733;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  .gold-partner--title {
+    color: #fff;
+  }
+}
+.diamond-partner {
+}
+.diamond-partner--title {
+  color: #51e7d0;
+}
+.platinum-hookah-partner {
+}
+.platinum-hookah-partner--title {
+  color: #f237a8;
+}
+.platinum-terrace-partner {
+}
+.platinum-terrace-partner--title {
+  color: #3180ff;
+}
+.gold-partner {
+}
+.gold-partner--title {
+  color: #ff4733;
+}
+.map__item--info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+.general-partner--info {
+  .map__item--info-left--title,
+  .map__item--info-left--text--title {
+    color: #cff665;
+  }
+}
+.diamond-partner--info {
+  .map__item--info-left--text--title,
+  .map__item--info-left--title {
+    color: #51e7d0;
+  }
+  .map__item--info-right {
+    height: 454px;
+  }
+}
+.platinum-hookah-partner--info {
+  .map__item--info-left--text--title,
+  .map__item--info-left--title {
+    color: #f237a8;
+  }
+  .map__item--info-right {
+    height: 522px;
+  }
+}
+.platinum-terrace-partner--info {
+  .map__item--info-left--text--title,
+  .map__item--info-left--title {
+    color: #3180ff;
+  }
+  .map__item--info-right {
+    height: 522px;
+  }
+}
+.gold-partner--info {
+  .map__item--info-left--text--title,
+  .map__item--info-left--title {
+    color: #ff4733;
+  }
+  .map__item--info-right {
+    height: 614px;
+  }
+}
+.map__item--info-left {
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 2.95px solid #8f8f8f;
+  border-radius: 28px;
+  padding: 31px 90px 14px 27px;
+}
+
+.map__item--info-left-lower {
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 2.95px solid #8f8f8f;
+  border-radius: 28px;
+  padding: 22px 90px 14px 27px;
+  margin-top: 20px;
+}
+.map__item--info-left--inner {
+  max-width: 400px;
+  width: 100%;
+}
+.map__item--info-left--title {
+  font: 500 85px / 80% "Helvetica";
+  letter-spacing: -0.1em;
+  padding-bottom: 30px;
+}
+.map__item--info-left-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 100px;
+}
+.map__item--info-left-icon {
+  cursor: pointer;
+}
+.map__item--info-left--text {
+}
+.map__item--info-left--text--subtitle {
+  font: 500 34px / 80% "Helvetica";
+  letter-spacing: -0.1em;
+  color: #8f8f8f;
+  padding-bottom: 5px;
+}
+.map__item--info-left--text--title {
+  font: 500 85px / 80% "Helvetica";
+  letter-spacing: -0.1em;
+}
+.map__item--info-right {
+  border: 2.95px solid #8f8f8f;
+  border-radius: 28px;
+  padding: 24px 33px 35px 31px;
+}
+.map__item--info-right--list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.map__item--info-right--list-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.map__item--info-right--list-item-text {
+  font: 500 27px / 80% "Helvetica";
+  letter-spacing: -0.03em;
+  color: #000;
+  max-width: 480px;
+}
+.diamond-partner--info {
+}
+.platinum-hookah-partner--info {
+}
+.platinum-terrace-partner--info {
+}
+.gold-partner--info {
+}
+.map__item--info-left-upper {
+}
+.map__item--info-left-lower {
+}

@@ -1,0 +1,49 @@
+@font-face {
+    font-family: "Satoshi";
+    src: url("https://db.onlinewebfonts.com/t/2bf16335573007d828f4197c2b884c04.eot");
+    src: url("https://db.onlinewebfonts.com/t/2bf16335573007d828f4197c2b884c04.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/2bf16335573007d828f4197c2b884c04.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/2bf16335573007d828f4197c2b884c04.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/2bf16335573007d828f4197c2b884c04.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/2bf16335573007d828f4197c2b884c04.svg#Satoshi")format("svg");
+  }
+
+  body{
+    background: #222526;
+    color: #E0E0E0;
+    font-weight: 1000;
+    padding-left: 100px;
+    font-size: 48px;
+    font-family: 'Satoshi';
+  }
+
+
+h1{
+    width: 20ch;
+    text-wrap: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(20) infinite alternate-reverse;
+}
+
+@keyframes typing{
+    from{
+        width: 0ch;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

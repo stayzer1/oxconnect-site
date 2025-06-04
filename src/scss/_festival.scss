@@ -1,0 +1,26 @@
+.festival {
+  background-color: #cff665;
+  .container {
+    background-color: #fff;
+    padding-bottom: 70px;
+  }
+}
+.festival__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding-bottom: 80px;
+}
+.festival__inner--title {
+}
+.festival__inner--descr {
+  font: 500 25px / 100% "Helvetica";
+  letter-spacing: -0.03em;
+  color: #000;
+  max-width: 490px;
+}
+.festival__title img {
+  margin: 0 auto;
+  display: block;
+}

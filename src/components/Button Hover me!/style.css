@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "Satoshi";
+    src: url("https://db.onlinewebfonts.com/t/2bf16335573007d828f4197c2b884c04.eot");
+    src: url("https://db.onlinewebfonts.com/t/2bf16335573007d828f4197c2b884c04.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/2bf16335573007d828f4197c2b884c04.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/2bf16335573007d828f4197c2b884c04.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/2bf16335573007d828f4197c2b884c04.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/2bf16335573007d828f4197c2b884c04.svg#Satoshi")format("svg");
+  }
+
+  body{
+    background: #222526;
+    color: #E0E0E0;
+    font-weight: 1000;
+    padding-left: 230px;
+    padding-top: 200px;
+    font-size: 48px;
+  }
+
+
+button {
+    width: 300px;
+    height: 60px;
+    font-size: 40px;
+    font-weight: 790;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: black;
+    transform: translateY(-7px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

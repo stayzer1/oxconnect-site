@@ -1,0 +1,20 @@
+.marquee {
+  overflow: hidden;
+  margin: 20px;
+  background: #cff665;
+}
+.marquee3k__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.marquee3k {
+}
+.marquee__item {
+  display: inline-flex !important;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 30px;
+}
