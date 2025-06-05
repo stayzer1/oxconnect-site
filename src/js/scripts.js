@@ -56,4 +56,43 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
+
+
+    // Переключение между info и slider с активными иконками
+    document.querySelectorAll('.map__item--info').forEach(function(item) {
+        const infoIcon = item.querySelector('.map__item--info-left-icon--info');
+        const sliderIcon = item.querySelector('.map__item--info-left-icon--slider');
+        const infoBlock = item.querySelector('.map__item--info-right--info');
+        const sliderBlock = item.querySelector('.map__item--info-right--slider');
+
+        if (infoIcon && sliderIcon && infoBlock && sliderBlock) {
+            infoIcon.addEventListener('click', function(e) {
+                e.stopPropagation();
+                infoBlock.classList.add('map__item--info-right--info-active');
+                sliderBlock.classList.remove('map__item--info-right--slider-active');
+                infoIcon.classList.add('map__item--info-left-icon--info-active');
+                sliderIcon.classList.remove('map__item--info-left-icon--info-active');
+            });
+            sliderIcon.addEventListener('click', function(e) {
+                e.stopPropagation();
+                infoBlock.classList.remove('map__item--info-right--info-active');
+                sliderBlock.classList.add('map__item--info-right--slider-active');
+                infoIcon.classList.remove('map__item--info-left-icon--info-active');
+                sliderIcon.classList.add('map__item--info-left-icon--info-active');
+            });
+        }
+    });
+
+    var elms = document.getElementsByClassName( 'splide' );
+
+    for ( var i = 0; i < elms.length; i++ ) {
+      new Splide( elms[ i ], {
+        type: 'loop',
+        perPage: 1,
+        perMove: 1,
+        gap: '20px',
+        pagination: false,
+        autoplay: true,
+      } ).mount();
+}
 });

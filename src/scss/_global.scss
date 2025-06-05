@@ -28,6 +28,19 @@ body {
     overflow: hidden;
   }
 }
+.main__line-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main {
+  overflow: hidden;
+}
+.main__line-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
 // Animations
 // Fade
