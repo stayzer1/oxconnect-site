@@ -154,6 +154,36 @@
     height: 614px;
   }
 }
+.general-partner-active {
+  background-color: #cff665;
+  .general-partner--title {
+    color: #fff;
+  }
+}
+.diamond-partner-active {
+  background-color: #51e7d0;
+  .diamond-partner--title {
+    color: #fff;
+  }
+}
+.platinum-hookah-partner-active {
+  background-color: #f237a8;
+  .platinum-hookah-partner--title {
+    color: #fff;
+  }
+}
+.platinum-terrace-partner-active {
+  background-color: #3180ff;
+  .platinum-terrace-partner--title {
+    color: #fff;
+  }
+}
+.gold-partner-active {
+  background-color: #ff4733;
+  .gold-partner--title {
+    color: #fff;
+  }
+}
 .map__item--info-left {
   max-width: 400px;
   width: 100%;

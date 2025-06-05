@@ -17,3 +17,19 @@
 
 // Libs
 // @import './libs/swiper';
+
+// Стили для анимации блоков партнеров
+.map__item {
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &-active {
+    transform: scale(1.05);
+  }
+}
+
+.map__item--info {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
