@@ -80,6 +80,7 @@ body.locked {
   position: absolute;
   top: 0;
   left: 0;
+  width: 27px;
 }
 
 main {
@@ -376,6 +377,40 @@ header {
       -ms-flex-align: center;
           align-items: center;
   gap: 19px;
+}
+
+.gallery__marquee--item {
+  position: relative;
+}
+
+.gallery__marquee__item-corner-left-up {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.gallery__marquee__item-corner-left-down {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  position: absolute;
+  left: -2px;
+  bottom: 0;
+}
+
+.gallery__marquee__item-corner-right-up {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.gallery__marquee__item-corner-right-down {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .about {
@@ -702,7 +737,7 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 20px;
-  padding-bottom: 50px;
+  padding-bottom: 150px;
 }
 
 .map__item {
@@ -1169,6 +1204,178 @@ header {
   bottom: 10px;
   width: 30px;
   height: 42px;
+}
+
+.general-partner-modal,
+.diamond-partner-modal,
+.platinum-hookah-partner-modal,
+.platinum-terrace-partner-modal,
+.gold-partner-modal {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.general-partner-modal__inner,
+.diamond-partner-modal__inner,
+.platinum-hookah-partner-modal__inner,
+.platinum-terrace-partner-modal__inner,
+.gold-partner-modal__inner {
+  -webkit-backdrop-filter: blur(15.6999998093px);
+          backdrop-filter: blur(15.6999998093px);
+  background: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  position: relative;
+  -webkit-transform: scale(0.92);
+      -ms-transform: scale(0.92);
+          transform: scale(0.92);
+  opacity: 0;
+  -webkit-transition: opacity 0.4s, background 0.4s, -webkit-transform 0.4s cubic-bezier(0.4, 1.6, 0.6, 1);
+  transition: opacity 0.4s, background 0.4s, -webkit-transform 0.4s cubic-bezier(0.4, 1.6, 0.6, 1);
+  -o-transition: transform 0.4s cubic-bezier(0.4, 1.6, 0.6, 1), opacity 0.4s, background 0.4s;
+  transition: transform 0.4s cubic-bezier(0.4, 1.6, 0.6, 1), opacity 0.4s, background 0.4s;
+  transition: transform 0.4s cubic-bezier(0.4, 1.6, 0.6, 1), opacity 0.4s, background 0.4s, -webkit-transform 0.4s cubic-bezier(0.4, 1.6, 0.6, 1);
+}
+
+.general-partner-modal--images,
+.diamond-partner-modal--images,
+.platinum-hookah-partner-modal--images,
+.platinum-terrace-partner-modal--images,
+.gold-partner-modal--images {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 980px;
+  width: 100%;
+}
+
+.general-partner-modal--images img,
+.diamond-partner-modal--images img,
+.platinum-hookah-partner-modal--images img,
+.platinum-terrace-partner-modal--images img,
+.gold-partner-modal--images img {
+  width: 100%;
+}
+
+.general-partner-modal--images {
+  -webkit-box-shadow: 0 0 15px 4px #cff665;
+          box-shadow: 0 0 15px 4px #cff665;
+  border-radius: 28px;
+}
+
+.diamond-partner-modal--images {
+  -webkit-box-shadow: 0 0 15px 4px #65cff6;
+          box-shadow: 0 0 15px 4px #65cff6;
+  border-radius: 28px;
+}
+
+.platinum-hookah-partner-modal--images {
+  -webkit-box-shadow: 0 0 15px 4px #f237a8;
+          box-shadow: 0 0 15px 4px #f237a8;
+  border-radius: 28px;
+}
+
+.platinum-terrace-partner-modal--images {
+  -webkit-box-shadow: 0 0 15px 4px #3180ff;
+          box-shadow: 0 0 15px 4px #3180ff;
+  border-radius: 28px;
+}
+
+.gold-partner-modal--images {
+  -webkit-box-shadow: 0 0 15px 4px #f66565;
+          box-shadow: 0 0 15px 4px #f66565;
+  border-radius: 28px;
+}
+
+.general-partner-modal--close,
+.diamond-partner-modal--close,
+.platinum-hookah-partner-modal--close,
+.platinum-terrace-partner-modal--close,
+.gold-partner-modal--close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.general-partner-modal--close img,
+.diamond-partner-modal--close img,
+.platinum-hookah-partner-modal--close img,
+.platinum-terrace-partner-modal--close img,
+.gold-partner-modal--close img {
+  width: 24px;
+}
+
+.general-partner-modal--active,
+.diamond-partner-modal--active,
+.platinum-hookah-partner-modal--active,
+.platinum-terrace-partner-modal--active,
+.gold-partner-modal--active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.general-partner-modal--active .general-partner-modal__inner,
+.general-partner-modal--active .diamond-partner-modal__inner,
+.general-partner-modal--active .platinum-hookah-partner-modal__inner,
+.general-partner-modal--active .platinum-terrace-partner-modal__inner,
+.general-partner-modal--active .gold-partner-modal__inner,
+.diamond-partner-modal--active .general-partner-modal__inner,
+.diamond-partner-modal--active .diamond-partner-modal__inner,
+.diamond-partner-modal--active .platinum-hookah-partner-modal__inner,
+.diamond-partner-modal--active .platinum-terrace-partner-modal__inner,
+.diamond-partner-modal--active .gold-partner-modal__inner,
+.platinum-hookah-partner-modal--active .general-partner-modal__inner,
+.platinum-hookah-partner-modal--active .diamond-partner-modal__inner,
+.platinum-hookah-partner-modal--active .platinum-hookah-partner-modal__inner,
+.platinum-hookah-partner-modal--active .platinum-terrace-partner-modal__inner,
+.platinum-hookah-partner-modal--active .gold-partner-modal__inner,
+.platinum-terrace-partner-modal--active .general-partner-modal__inner,
+.platinum-terrace-partner-modal--active .diamond-partner-modal__inner,
+.platinum-terrace-partner-modal--active .platinum-hookah-partner-modal__inner,
+.platinum-terrace-partner-modal--active .platinum-terrace-partner-modal__inner,
+.platinum-terrace-partner-modal--active .gold-partner-modal__inner,
+.gold-partner-modal--active .general-partner-modal__inner,
+.gold-partner-modal--active .diamond-partner-modal__inner,
+.gold-partner-modal--active .platinum-hookah-partner-modal__inner,
+.gold-partner-modal--active .platinum-terrace-partner-modal__inner,
+.gold-partner-modal--active .gold-partner-modal__inner {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+footer {
+  position: relative;
+  background-color: #cff665;
+  display: block;
+}
+
+footer .container {
+  background-color: #fff;
+}
+
+footer img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 .map__item {

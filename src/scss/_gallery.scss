@@ -27,3 +27,28 @@
   align-items: center;
   gap: 19px;
 }
+.gallery__marquee--item {
+  position: relative;
+}
+.gallery__marquee__item-corner-left-up {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.gallery__marquee__item-corner-left-down {
+  transform: rotate(90deg);
+  position: absolute;
+  left: -2px;
+  bottom: 0;
+}
+.gallery__marquee__item-corner-right-up {
+  transform: rotate(90deg);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.gallery__marquee__item-corner-right-down {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}

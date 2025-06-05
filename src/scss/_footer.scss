@@ -1,4 +1,15 @@
 // Footer
 footer {
-    display: block;
+  position: relative;
+  background-color: #cff665;
+  .container {
+    background-color: #fff;
+  }
+  display: block;
+  img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
 }

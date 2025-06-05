@@ -1,45 +1,97 @@
 // ************************ Модальное окно ************************ //
-// mf
-.modal__wrapper {
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    // display: none;
-
-    .modal {
-        background: white;
-        padding: 25px;
-        border-radius: 5px;
-        height: 350px;
-        width: 300px;
-
-        &__title {
-            text-align: center;
-        }
-
-        &__close {
-            cursor: pointer;
-            display: flex;
-            justify-content: flex-end;
-        }
-    }
+.general-partner-modal,
+.diamond-partner-modal,
+.platinum-hookah-partner-modal,
+.platinum-terrace-partner-modal,
+.gold-partner-modal {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
 }
+.general-partner-modal__inner,
+.diamond-partner-modal__inner,
+.platinum-hookah-partner-modal__inner,
+.platinum-terrace-partner-modal__inner,
+.gold-partner-modal__inner {
+  backdrop-filter: blur(15.699999809265137px);
+  background: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  position: relative;
+  transform: scale(0.92);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.4, 1.6, 0.6, 1), opacity 0.4s,
+    background 0.4s;
+}
+.general-partner-modal--images,
+.diamond-partner-modal--images,
+.platinum-hookah-partner-modal--images,
+.platinum-terrace-partner-modal--images,
+.gold-partner-modal--images {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 980px;
+  width: 100%;
+  img {
+    width: 100%;
+  }
+}
+.general-partner-modal--images {
+  box-shadow: 0 0 15px 4px #cff665;
+  border-radius: 28px;
+}
+.diamond-partner-modal--images {
+  box-shadow: 0 0 15px 4px #65cff6;
+  border-radius: 28px;
+}
+.platinum-hookah-partner-modal--images {
+  box-shadow: 0 0 15px 4px #f237a8;
+  border-radius: 28px;
+}
+.platinum-terrace-partner-modal--images {
+  box-shadow: 0 0 15px 4px #3180ff;
+  border-radius: 28px;
+}
+.gold-partner-modal--images {
+  box-shadow: 0 0 15px 4px #f66565;
+  border-radius: 28px;
+}
+.general-partner-modal--close,
+.diamond-partner-modal--close,
+.platinum-hookah-partner-modal--close,
+.platinum-terrace-partner-modal--close,
+.gold-partner-modal--close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 10;
+  img {
+    width: 24px;
+  }
+}
+.general-partner-modal--active,
+.diamond-partner-modal--active,
+.platinum-hookah-partner-modal--active,
+.platinum-terrace-partner-modal--active,
+.gold-partner-modal--active {
+  opacity: 1;
+  pointer-events: auto;
 
-// ************************ Кнопка вызова модального окна ************************ //
-.modal__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-    border-radius: 30px;
-    height: 50px;
-    width: 150px;
-    cursor: pointer;
+  .general-partner-modal__inner,
+  .diamond-partner-modal__inner,
+  .platinum-hookah-partner-modal__inner,
+  .platinum-terrace-partner-modal__inner,
+  .gold-partner-modal__inner {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

@@ -96,4 +96,63 @@ document.addEventListener('DOMContentLoaded', function() {
         autoplay: true,
       } ).mount();
 }
+
+    // Маппинг иконок и модалок
+    const modalMap = [
+        {
+            icon: '.map__item--info-left-icon-general-map',
+            modal: '.general-partner-modal',
+        },
+        {
+            icon: '.map__item--info-left-icon-diamond-map',
+            modal: '.diamond-partner-modal',
+        },
+        {
+            icon: '.map__item--info-left-icon-platinum-hookah-map',
+            modal: '.platinum-hookah-partner-modal',
+        },
+        {
+            icon: '.map__item--info-left-icon-platinum-terrace-map',
+            modal: '.platinum-terrace-partner-modal',
+        },
+        {
+            icon: '.map__item--info-left-icon-gold-map',
+            modal: '.gold-partner-modal',
+        },
+    ];
+
+    modalMap.forEach(function(pair) {
+        document.querySelectorAll(pair.icon).forEach(function(icon) {
+            icon.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const modal = document.querySelector(pair.modal);
+                if (modal) {
+                    modal.classList.add(pair.modal.replace('.', '') + '--active');
+                }
+            });
+        });
+
+        // Закрытие модального окна
+        const modal = document.querySelector(pair.modal);
+        if (modal) {
+            // Клик по крестику
+            const closeBtn = modal.querySelector(pair.modal + '--close');
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    modal.classList.remove(pair.modal.replace('.', '') + '--active');
+                });
+            }
+            // Клик вне блока картинок
+            const inner = modal.querySelector(pair.modal + '__inner');
+            const images = modal.querySelector(pair.modal + '--images');
+            if (inner && images) {
+                inner.addEventListener('click', function(e) {
+                    if (!images.contains(e.target)) {
+                        modal.classList.remove(pair.modal.replace('.', '') + '--active');
+                    }
+                });
+            }
+        }
+    });
 });
