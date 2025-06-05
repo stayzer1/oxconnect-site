@@ -127,7 +127,7 @@ header {
 }
 
 .navbar {
-  padding-top: 60px;
+  padding-top: 35px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -157,7 +157,7 @@ header {
 }
 
 .menu__item-link {
-  font: 700 27px/80% "Helvetica";
+  font: 700 22px/80% "Helvetica";
   letter-spacing: -0.1em;
   text-align: center;
   color: #000;
@@ -204,6 +204,10 @@ header {
   padding-bottom: 160px;
 }
 
+.hero__inner img {
+  max-width: 800px;
+}
+
 .hero__inner--info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -214,12 +218,13 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 800px;
   width: 100%;
 }
 
 .hero__info--text {
   padding-top: 16px;
-  font: 500 57px/100% "Helvetica";
+  font: 500 48px/100% "Helvetica";
   letter-spacing: -0.1em;
   color: #000;
 }

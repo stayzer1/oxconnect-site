@@ -12,16 +12,20 @@
   align-items: center;
   flex-direction: column;
   padding-bottom: 160px;
+  img {
+    max-width: 800px;
+  }
 }
 .hero__inner--info {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 800px;
   width: 100%;
 }
 .hero__info--text {
   padding-top: 16px;
-  font: 500 57px / 100% "Helvetica";
+  font: 500 48px / 100% "Helvetica";
   letter-spacing: -0.1em;
   color: #000;
 }
