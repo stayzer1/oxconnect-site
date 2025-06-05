@@ -292,7 +292,7 @@ header {
 }
 
 .who {
-  margin-top: 20px;
+  margin-top: clamp(2.5rem, 2.036rem + 1.905vw, 3.75rem);
   background-color: #cff665;
 }
 
@@ -424,9 +424,9 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -506,10 +506,14 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 5px;
+}
+
+.why__left__for--list-item img {
+  padding-top: 5px;
 }
 
 .why__left__for--list-item-text {
@@ -581,10 +585,14 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 5px;
+}
+
+.why__right--list-item img {
+  padding-top: 3px;
 }
 
 .why__right--list-item-text {

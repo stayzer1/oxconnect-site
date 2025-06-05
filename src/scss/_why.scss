@@ -33,8 +33,11 @@
 }
 .why__left__for--list-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 5px;
+  img {
+    padding-top: 5px;
+  }
 }
 .why__left__for--list-item-text {
   font: 500 19px / 100% "Helvetica";
@@ -84,8 +87,11 @@
 }
 .why__right--list-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 5px;
+  img {
+    padding-top: 3px;
+  }
 }
 .why__right--list-item-text {
   font: 500 19px / 100% "Helvetica";
