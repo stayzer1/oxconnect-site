@@ -272,68 +272,139 @@ Object.keys(partners).forEach(partnerClass => {
     });
   })();
 
-  const smoothLinks = document.querySelectorAll('a[href^="#"]');
-    for (let smoothLink of smoothLinks) {
-    smoothLink.addEventListener("click", function (e) {
-        e.preventDefault();
-        const id = smoothLink.getAttribute("href");
-
-        document.querySelector(id).scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        });
-    });
-    }
 
     
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Регистрируем ScrollTrigger
-    gsap.registerPlugin(ScrollTrigger);
-  
-    // Слева направо
-    document.querySelectorAll('.gsap-fade-in-left').forEach(el => {
+  // Регистрируем плагины GSAP
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+  // Плавный скролл
+  const smoothLinks = document.querySelectorAll('a[href^="#"]');
+  for (let smoothLink of smoothLinks) {
+      smoothLink.addEventListener("click", function (e) {
+          e.preventDefault();
+          const id = smoothLink.getAttribute("href");
+          const targetElement = document.querySelector(id);
+          
+          gsap.to(window, {
+              duration: 1,
+              scrollTo: {
+                  y: targetElement,
+                  offsetY: 0
+              },
+              ease: "power2.inOut"
+          });
+
+          setTimeout(() => {
+              history.pushState(null, null, id);
+          }, 100);
+      });
+  }
+
+  // Анимации появления элементов при скролле
+  document.querySelectorAll('.gsap-fade-in-left').forEach(el => {
       gsap.fromTo(el, 
-        {opacity: 0, x: -60}, 
-        {
-          opacity: 1, x: 0, duration: 0.7, ease: "power2.out",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 85%", // когда верх элемента доходит до 85% окна
-            toggleActions: "play none none none"
+          {opacity: 0, x: -60}, 
+          {
+              opacity: 1, x: 0, 
+              duration: 0.7, 
+              ease: "power2.out",
+              scrollTrigger: {
+                  trigger: el,
+                  start: "top 85%",
+                  toggleActions: "play none none none"
+              }
           }
-        }
       );
-    });
-  
-    // Справа налево
-    document.querySelectorAll('.gsap-fade-in-right').forEach(el => {
-      gsap.fromTo(el, 
-        {opacity: 0, x: 60}, 
-        {
-          opacity: 1, x: 0, duration: 0.7, ease: "power2.out",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 85%",
-            toggleActions: "play none none none"
-          }
-        }
-      );
-    });
-  
-    // Снизу вверх
-    document.querySelectorAll('.gsap-fade-in-up').forEach(el => {
-      gsap.fromTo(el, 
-        {opacity: 0, y: 60}, 
-        {
-          opacity: 1, y: 0, duration: 0.7, ease: "power2.out",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 85%",
-            toggleActions: "play none none none"
-          }
-        }
-      );
-    });
   });
+
+  document.querySelectorAll('.gsap-fade-in-right').forEach(el => {
+      gsap.fromTo(el, 
+          {opacity: 0, x: 60}, 
+          {
+              opacity: 1, x: 0, 
+              duration: 0.7, 
+              ease: "power2.out",
+              scrollTrigger: {
+                  trigger: el,
+                  start: "top 85%",
+                  toggleActions: "play none none none"
+              }
+          }
+      );
+  });
+
+  document.querySelectorAll('.gsap-fade-in-up').forEach(el => {
+      gsap.fromTo(el, 
+          {opacity: 0, y: 60}, 
+          {
+              opacity: 1, y: 0, 
+              duration: 0.7, 
+              ease: "power2.out",
+              scrollTrigger: {
+                  trigger: el,
+                  start: "top 85%",
+                  toggleActions: "play none none none"
+              }
+          }
+      );
+  });
+
+  // Смена языка
+  const langItems = document.querySelectorAll('.menu__lang-item');
+  langItems.forEach(function(item) {
+      item.addEventListener('click', function() {
+          // Снимаем активность у всех языков в этом меню
+          langItems.forEach(function(i) {
+              i.classList.remove('menu__lang-item--active');
+          });
+          item.classList.add('menu__lang-item--active');
+
+          // Синхронизируем оба меню
+          const lang = item.getAttribute('data-lang');
+          document.querySelectorAll('.menu__lang-item').forEach(function(i) {
+              if (i.getAttribute('data-lang') === lang) {
+                  i.classList.add('menu__lang-item--active');
+              } else {
+                  i.classList.remove('menu__lang-item--active');
+              }
+          });
+
+          // Обновляем текст кнопки
+          document.querySelectorAll('.menu__lang-toggle').forEach(function(toggle) {
+              toggle.textContent = lang.toUpperCase();
+          });
+
+          // Показываем нужный язык
+          if (lang === 'ru') {
+              document.querySelectorAll('.ru-text').forEach(function(el) {
+                  el.style.display = 'flex';
+              });
+              document.querySelectorAll('.en-text').forEach(function(el) {
+                  el.style.display = 'none';
+              });
+          } else if (lang === 'en') {
+              document.querySelectorAll('.ru-text').forEach(function(el) {
+                  el.style.display = 'none';
+              });
+              document.querySelectorAll('.en-text').forEach(function(el) {
+                  el.style.display = 'flex';
+              });
+          }
+      });
+  });
+
+  // По умолчанию RU
+  document.querySelectorAll('.ru-text').forEach(function(el) {
+      el.style.display = 'flex';
+  });
+  document.querySelectorAll('.en-text').forEach(function(el) {
+      el.style.display = 'none';
+  });
+  // Устанавливаем начальный текст кнопки
+  document.querySelectorAll('.menu__lang-toggle').forEach(function(toggle) {
+      toggle.textContent = 'RU';
+  });
+});

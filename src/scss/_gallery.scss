@@ -49,11 +49,17 @@
 }
 .gallery__marquee__item-corner-right-down {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: -1px;
+  bottom: -1px;
 }
 .gallery__marquee--items {
   padding-left: 15px;
+}
+.gallery__marquee__item-img {
+  width: 350px;
+  height: 188px;
+  border: 4.14px solid #cff665;
+  border-radius: 41px;
 }
 @media screen and (max-width: 1024px) {
   .gallery__marquee--item {
