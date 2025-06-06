@@ -38,6 +38,7 @@
 @media screen and (max-width: 768px) {
   .festival__inner {
     flex-direction: column;
+    gap: 20px;
   }
   .festival__inner--title {
     margin: 0 auto;
@@ -51,7 +52,11 @@
   }
   .festival {
     .container {
-      padding-bottom: 40px;
+      padding-bottom: 30px;
     }
+  }
+
+  .festival__inner {
+    padding-bottom: 40px;
   }
 }

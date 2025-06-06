@@ -137,6 +137,10 @@
   letter-spacing: -0.03em;
   color: #cff665;
 }
+.why__left__info-mobile,
+.why__left__info--line-mobile {
+  display: none;
+}
 @media screen and (max-width: 1024px) {
   .why__inner {
     flex-direction: column;
@@ -145,6 +149,12 @@
 @media screen and (max-width: 768px) {
   .why {
     margin: 10px;
+  }
+  .why__left {
+    max-width: 95%;
+  }
+  .why__left__for {
+    width: 100%;
   }
   .why__left__for--title {
     img {
@@ -194,5 +204,18 @@
   }
   .why__inner {
     padding-bottom: 40px;
+    position: relative;
+  }
+  .why__left__info-pc,
+  .why__left__info--line-pc {
+    display: none;
+  }
+  .why__left__info-mobile,
+  .why__left__info--line-mobile {
+    display: block;
+  }
+  .why__left__info--line-mobile {
+    height: 115px;
+    bottom: 40px;
   }
 }

@@ -22,6 +22,12 @@
   color: #000;
   max-width: 620px;
 }
+.who__inner--title-mobile {
+  display: none;
+}
+.festival__inner--title-mobile {
+  display: none;
+}
 @media screen and (max-width: 1024px) {
   .who__inner--descr {
     font-size: 18px;
@@ -37,10 +43,25 @@
   .who__inner--title {
     margin: 0 auto;
     padding-bottom: 20px;
-    width: 150px;
+    width: 400px;
   }
   .who__inner--descr {
     font-size: 16px;
     padding: 0 10px;
+  }
+  .who__inner--title-mobile {
+    display: block;
+  }
+  .who__inner--title-pc {
+    display: none;
+  }
+  .festival__inner--title-mobile {
+    display: block;
+  }
+  .festival__inner--title-pc {
+    display: none;
+  }
+  .festival__inner--title-mobile {
+    display: block;
   }
 }

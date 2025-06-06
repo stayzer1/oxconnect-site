@@ -12,17 +12,14 @@
 }
 .marquee__item {
   display: inline-flex !important;
-  gap: 30px;
+  gap: 15px;
+  img {
+    height: 50px;
+  }
   justify-content: center;
   align-items: center;
 
   margin-right: 30px;
 }
 @media screen and (max-width: 1024px) {
-  .marquee__item {
-    gap: 15px;
-    img {
-      height: 50px;
-    }
-  }
 }

@@ -46,8 +46,18 @@
 }
 .hero__background-right {
   position: absolute;
-  top: 30px;
+  top: 35px;
   right: 40px;
+  z-index: 444;
+  cursor: pointer;
+}
+.hero__background-right {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.mobile-menu .menu__item {
+  list-style: none;
 }
 .hero__background-left {
   position: absolute;

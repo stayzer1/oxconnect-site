@@ -43,44 +43,6 @@
         <li class="menu__item">
           <a href="#price" class="menu__item-link" data-scroll>PRICE</a>
         </li>
-        <li class="menu__item menu__dropdown">
-          <a class="menu__item-link menu__lang-toggle" data-scroll>LANG</a>
-          <ul class="menu__lang-list">
-            <li class="menu__lang-item menu__lang-item--active" data-lang="ru">
-              RU
-              <span class="menu__lang-check"
-                ><svg
-                  width="42"
-                  height="31"
-                  viewBox="0 0 42 31"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M17.7578 17.7871L17.7568 30.0312L12.2939 30.0312C12.2939 23.253 6.79224 17.7578 0.00390548 17.7578L0.00390571 12.3027C6.79224 12.3027 12.2949 6.80945 12.2949 0.0312484L17.7578 0.0312487L17.7578 12.2773L41.0234 12.2773L41.0234 17.7871L17.7578 17.7871Z"
-                    fill="#CFF665"
-                  /></svg
-              ></span>
-            </li>
-            <li class="menu__lang-item" data-lang="en">
-              EN
-              <span class="menu__lang-check">
-                <svg
-                  width="42"
-                  height="31"
-                  viewBox="0 0 42 31"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M17.7578 17.7871L17.7568 30.0312L12.2939 30.0312C12.2939 23.253 6.79224 17.7578 0.00390548 17.7578L0.00390571 12.3027C6.79224 12.3027 12.2949 6.80945 12.2949 0.0312484L17.7578 0.0312487L17.7578 12.2773L41.0234 12.2773L41.0234 17.7871L17.7578 17.7871Z"
-                    fill="#CFF665"
-                  />
-                </svg>
-              </span>
-            </li>
-          </ul>
-        </li>
       </ul>
       <button class="burger">
         <span class="burger__line"></span>
@@ -170,7 +132,44 @@
           alt="hero-bg"
         />
         <img src="img/hero-back-1.svg" alt="" class="hero__background-left" />
-        <img src="img/hero-back-2.svg" alt="" class="hero__background-right" />
+        <li class="menu__item menu__dropdown hero__background-right">
+          <a class="menu__item-link menu__lang-toggle" data-scroll>LANG</a>
+          <ul class="menu__lang-list">
+            <li class="menu__lang-item menu__lang-item--active" data-lang="ru">
+              RU
+              <span class="menu__lang-check"
+                ><svg
+                  width="42"
+                  height="31"
+                  viewBox="0 0 42 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.7578 17.7871L17.7568 30.0312L12.2939 30.0312C12.2939 23.253 6.79224 17.7578 0.00390548 17.7578L0.00390571 12.3027C6.79224 12.3027 12.2949 6.80945 12.2949 0.0312484L17.7578 0.0312487L17.7578 12.2773L41.0234 12.2773L41.0234 17.7871L17.7578 17.7871Z"
+                    fill="#CFF665"
+                  /></svg
+              ></span>
+            </li>
+            <li class="menu__lang-item" data-lang="en">
+              EN
+              <span class="menu__lang-check">
+                <svg
+                  width="42"
+                  height="31"
+                  viewBox="0 0 42 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.7578 17.7871L17.7568 30.0312L12.2939 30.0312C12.2939 23.253 6.79224 17.7578 0.00390548 17.7578L0.00390571 12.3027C6.79224 12.3027 12.2949 6.80945 12.2949 0.0312484L17.7578 0.0312487L17.7578 12.2773L41.0234 12.2773L41.0234 17.7871L17.7578 17.7871Z"
+                    fill="#CFF665"
+                  />
+                </svg>
+              </span>
+            </li>
+          </ul>
+        </li>
       </section>
       <section class="marquee gsap-fade-in-up">
         <div class="marquee3k" data-speed="1">
@@ -184,8 +183,13 @@
         <div class="container">
           <div class="who__inner">
             <img
-              class="who__inner--title gsap-fade-in-left"
+              class="who__inner--title who__inner--title-pc gsap-fade-in-left"
               src="img/who_text.svg"
+              alt=""
+            />
+            <img
+              class="who__inner--title who__inner--title-mobile gsap-fade-in-left"
+              src="img/who_text-mobile.svg"
               alt=""
             />
             <p class="who__inner--descr ru-text gsap-fade-in-right">
@@ -515,6 +519,26 @@
         <div class="container">
           <div class="about__items">
             <div class="about__item gsap-fade-in-left">
+              <img
+                src="img/about-corner.svg"
+                alt=""
+                class="about__item--corner-left-up"
+              />
+              <img
+                src="img/about-corner.svg"
+                alt=""
+                class="about__item--corner-left-down"
+              />
+              <img
+                src="img/about-corner.svg"
+                alt=""
+                class="about__item--corner-right-up"
+              />
+              <img
+                src="img/about-corner.svg"
+                alt=""
+                class="about__item--corner-right-down"
+              />
               <h2 class="about__item--title ru-text">
                 <img src="img/meroppriatia.svg" alt="" />
               </h2>
@@ -530,6 +554,26 @@
               </span>
             </div>
             <div class="about__item gsap-fade-in-right">
+              <img
+                src="img/about-corner.svg"
+                alt=""
+                class="about__item--corner-left-up"
+              />
+              <img
+                src="img/about-corner.svg"
+                alt=""
+                class="about__item--corner-left-down"
+              />
+              <img
+                src="img/about-corner.svg"
+                alt=""
+                class="about__item--corner-right-up"
+              />
+              <img
+                src="img/about-corner.svg"
+                alt=""
+                class="about__item--corner-right-down"
+              />
               <h2 class="about__item--title ru-text">
                 <img src="img/mln-chelovek.svg" alt="" />
               </h2>
@@ -546,6 +590,26 @@
               </span>
             </div>
             <div class="about__item gsap-fade-in-left">
+              <img
+                src="img/about-corner.svg"
+                alt=""
+                class="about__item--corner-left-up"
+              />
+              <img
+                src="img/about-corner.svg"
+                alt=""
+                class="about__item--corner-left-down"
+              />
+              <img
+                src="img/about-corner.svg"
+                alt=""
+                class="about__item--corner-right-up"
+              />
+              <img
+                src="img/about-corner.svg"
+                alt=""
+                class="about__item--corner-right-down"
+              />
               <h2 class="about__item--title">
                 <img src="img/birzhi.svg" alt="" />
               </h2>
@@ -559,6 +623,26 @@
               </span>
             </div>
             <div class="about__item gsap-fade-in-right">
+              <img
+                src="img/about-corner.svg"
+                alt=""
+                class="about__item--corner-left-up"
+              />
+              <img
+                src="img/about-corner.svg"
+                alt=""
+                class="about__item--corner-left-down"
+              />
+              <img
+                src="img/about-corner.svg"
+                alt=""
+                class="about__item--corner-right-up"
+              />
+              <img
+                src="img/about-corner.svg"
+                alt=""
+                class="about__item--corner-right-down"
+              />
               <h2 class="about__item--title">
                 <img src="img/4her.svg" alt="" />
               </h2>
@@ -577,8 +661,15 @@
       <section class="festival" id="festival">
         <div class="container">
           <div class="festival__inner">
-            <div class="festival__inner--title gsap-fade-in-left">
+            <div
+              class="festival__inner--title festival__inner--title-pc gsap-fade-in-left"
+            >
               <img src="img/festival_title.svg" alt="" />
+            </div>
+            <div
+              class="festival__inner--title festival__inner--title-mobile gsap-fade-in-left"
+            >
+              <img src="img/festival_title-mobile.svg" alt="" />
             </div>
             <p class="festival__inner--descr ru-text gsap-fade-in-right">
               0xConnect Festival — это первый в своём роде Web3-фестиваль в СНГ,
@@ -688,7 +779,7 @@
                   </div>
                 </div>
               </div>
-              <div class="why__left__info gsap-fade-in-left">
+              <div class="why__left__info why__left__info-pc gsap-fade-in-left">
                 <span class="why__left__info--text ru-text"
                   >Ты не пройдёшь по локации, не познакомившись. Тут всё — повод
                   для связи.</span
@@ -711,7 +802,7 @@
               <img
                 src="img/line-info.svg"
                 alt=""
-                class="why__left__info--line gsap-fade-in-left"
+                class="why__left__info--line why__left__info--line-pc gsap-fade-in-left"
               />
             </div>
             <div class="why__right gsap-fade-in-right">
@@ -819,6 +910,33 @@
                 </div>
               </div>
             </div>
+            <div
+              class="why__left__info why__left__info-mobile gsap-fade-in-left"
+            >
+              <span class="why__left__info--text ru-text"
+                >Ты не пройдёшь по локации, не познакомившись. Тут всё — повод
+                для связи.</span
+              >
+              <span class="why__left__info--text en-text"
+                >You won’t cross the venue without connecting with
+                someone.</span
+              >
+              <span class="why__left__info--text ru-text"
+                >Это не выставка. Не форум. Это живая децентрализованная
+                культура в действии. Мы создаём место силы, где Web3
+                возвращается к своему главному активу — людям.</span
+              >
+              <span class="why__left__info--text en-text"
+                >This isn’t an expo. Not a forum. It’s decentralized culture in
+                motion — a power zone where Web3 comes back to its core:
+                people.</span
+              >
+            </div>
+            <img
+              src="img/line-info.svg"
+              alt=""
+              class="why__left__info--line why__left__info--line-mobile gsap-fade-in-left"
+            />
           </div>
         </div>
       </section>
@@ -1287,12 +1405,12 @@
                     width="11"
                     height="11"
                     viewBox="0 0 11 11"
-                    fill="none"
+                    fill="#51e7d0"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
+                      fill="#51e7d0"
                     />
                   </svg>
                   <span class="map__item--info-right--list-item-text ru-text">
@@ -1312,7 +1430,7 @@
                   >
                     <path
                       d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
+                      fill="#51e7d0"
                     />
                   </svg>
                   <span class="map__item--info-right--list-item-text ru-text">
@@ -1332,7 +1450,7 @@
                   >
                     <path
                       d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
+                      fill="#51e7d0"
                     />
                   </svg>
                   <span class="map__item--info-right--list-item-text ru-text">
@@ -1352,7 +1470,7 @@
                   >
                     <path
                       d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
+                      fill="#51e7d0"
                     />
                   </svg>
                   <span class="map__item--info-right--list-item-text ru-text">
@@ -1372,7 +1490,7 @@
                   >
                     <path
                       d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
+                      fill="#51e7d0"
                     />
                   </svg>
                   <span class="map__item--info-right--list-item-text ru-text">
@@ -1392,7 +1510,7 @@
                   >
                     <path
                       d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
+                      fill="#51e7d0"
                     />
                   </svg>
                   <span class="map__item--info-right--list-item-text ru-text">
@@ -1412,7 +1530,7 @@
                   >
                     <path
                       d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
+                      fill="#51e7d0"
                     />
                   </svg>
                   <span class="map__item--info-right--list-item-text">
@@ -1429,7 +1547,7 @@
                   >
                     <path
                       d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
+                      fill="#51e7d0"
                     />
                   </svg>
                   <span class="map__item--info-right--list-item-text ru-text">
@@ -1449,7 +1567,7 @@
                   >
                     <path
                       d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
+                      fill="#51e7d0"
                     />
                   </svg>
                   <span class="map__item--info-right--list-item-text ru-text">
@@ -1610,7 +1728,7 @@
                   >
                     <path
                       d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
+                      fill="#f237a8"
                     />
                   </svg>
                   <span class="map__item--info-right--list-item-text ru-text">
@@ -1631,7 +1749,7 @@
                   >
                     <path
                       d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
+                      fill="#f237a8"
                     />
                   </svg>
                   <span class="map__item--info-right--list-item-text ru-text">
@@ -1651,7 +1769,7 @@
                   >
                     <path
                       d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
+                      fill="#f237a8"
                     />
                   </svg>
                   <span class="map__item--info-right--list-item-text ru-text">
@@ -1671,7 +1789,7 @@
                   >
                     <path
                       d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
+                      fill="#f237a8"
                     />
                   </svg>
                   <span class="map__item--info-right--list-item-text ru-text">
@@ -1691,7 +1809,7 @@
                   >
                     <path
                       d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
+                      fill="#f237a8"
                     />
                   </svg>
                   <span class="map__item--info-right--list-item-text ru-text">
@@ -1711,7 +1829,7 @@
                   >
                     <path
                       d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
+                      fill="#f237a8"
                     />
                   </svg>
                   <span class="map__item--info-right--list-item-text ru-text">
@@ -1870,7 +1988,7 @@
                   >
                     <path
                       d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
+                      fill="#3180ff"
                     />
                   </svg>
                   <span class="map__item--info-right--list-item-text ru-text">
@@ -1890,7 +2008,7 @@
                   >
                     <path
                       d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
+                      fill="#3180ff"
                     />
                   </svg>
                   <span class="map__item--info-right--list-item-text ru-text">
@@ -1910,7 +2028,7 @@
                   >
                     <path
                       d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
+                      fill="#3180ff"
                     />
                   </svg>
                   <span class="map__item--info-right--list-item-text ru-text">
@@ -1930,7 +2048,7 @@
                   >
                     <path
                       d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
+                      fill="#3180ff"
                     />
                   </svg>
                   <span class="map__item--info-right--list-item-text ru-text">
@@ -1950,7 +2068,7 @@
                   >
                     <path
                       d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
+                      fill="#3180ff"
                     />
                   </svg>
                   <span class="map__item--info-right--list-item-text ru-text">
@@ -1970,7 +2088,7 @@
                   >
                     <path
                       d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
+                      fill="#3180ff"
                     />
                   </svg>
                   <span class="map__item--info-right--list-item-text ru-text">
@@ -2138,7 +2256,7 @@
                   >
                     <path
                       d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
+                      fill="#ff4733"
                     />
                   </svg>
                   <span class="map__item--info-right--list-item-text ru-text">
@@ -2158,7 +2276,7 @@
                   >
                     <path
                       d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
+                      fill="#ff4733"
                     />
                   </svg>
                   <span class="map__item--info-right--list-item-text ru-text">
@@ -2178,7 +2296,7 @@
                   >
                     <path
                       d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
+                      fill="#ff4733"
                     />
                   </svg>
                   <span class="map__item--info-right--list-item-text ru-text">
@@ -2198,7 +2316,7 @@
                   >
                     <path
                       d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
+                      fill="#ff4733"
                     />
                   </svg>
                   <span class="map__item--info-right--list-item-text ru-text">
@@ -2218,7 +2336,7 @@
                   >
                     <path
                       d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
+                      fill="#ff4733"
                     />
                   </svg>
                   <span class="map__item--info-right--list-item-text ru-text">

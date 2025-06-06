@@ -224,7 +224,7 @@ Object.keys(partners).forEach(partnerClass => {
             i.classList.remove('menu__lang-item--active');
           });
           item.classList.add('menu__lang-item--active');
-  
+      
           // Синхронизируем оба меню
           const lang = item.getAttribute('data-lang');
           document.querySelectorAll('.menu__lang-item').forEach(function(i) {
@@ -234,7 +234,12 @@ Object.keys(partners).forEach(partnerClass => {
               i.classList.remove('menu__lang-item--active');
             }
           });
-  
+      
+          // Обновляем текст кнопки (вместо "LANG" показываем текущий язык)
+          document.querySelectorAll('.menu__lang-toggle').forEach(function(toggle) {
+            toggle.textContent = lang.toUpperCase();
+          });
+      
           // Показываем нужный язык
           if (lang === 'ru') {
             document.querySelectorAll('.ru-text').forEach(function(el) {
@@ -253,14 +258,18 @@ Object.keys(partners).forEach(partnerClass => {
           }
         });
       });
-    });
-  
-    // По умолчанию RU
-    document.querySelectorAll('.ru-text').forEach(function(el) {
-      el.style.display = 'flex';
-    });
-    document.querySelectorAll('.en-text').forEach(function(el) {
-      el.style.display = 'none';
+      
+      // По умолчанию RU
+      document.querySelectorAll('.ru-text').forEach(function(el) {
+        el.style.display = 'flex';
+      });
+      document.querySelectorAll('.en-text').forEach(function(el) {
+        el.style.display = 'none';
+      });
+      // Устанавливаем начальный текст кнопки
+      document.querySelectorAll('.menu__lang-toggle').forEach(function(toggle) {
+        toggle.textContent = 'RU';
+      });
     });
   })();
 

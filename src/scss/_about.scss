@@ -22,7 +22,32 @@
   justify-content: space-between;
   height: 240px;
   max-width: 480px;
+  position: relative;
 }
+.about__item--corner-left-up {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+.about__item--corner-left-down {
+  transform: rotate(-90deg);
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+}
+.about__item--corner-right-up {
+  position: absolute;
+  transform: rotate(90deg);
+  top: -1px;
+  right: -1px;
+}
+.about__item--corner-right-down {
+  position: absolute;
+  bottom: -1px;
+  transform: rotate(180deg);
+  right: -2px;
+}
+
 .about__item--title {
 }
 .about__item--text {
@@ -49,5 +74,8 @@
   }
   .about__item--text {
     font-size: 20px;
+  }
+  .about .container {
+    padding-bottom: 40px;
   }
 }
