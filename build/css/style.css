@@ -1617,12 +1617,6 @@ header {
   width: 100%;
 }
 
-.general-partner-modal--images {
-  -webkit-box-shadow: 0 0 15px 4px #cff665;
-          box-shadow: 0 0 15px 4px #cff665;
-  border-radius: 28px;
-}
-
 .diamond-partner-modal--images {
   -webkit-box-shadow: 0 0 15px 4px #65cff6;
           box-shadow: 0 0 15px 4px #65cff6;
