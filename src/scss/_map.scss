@@ -450,9 +450,12 @@
 .platinum-hookah-partner--info {
   .splide__slide {
     img {
-      object-fit: fill;
+      object-fit: revert;
     }
   }
+}
+.diamond-partner--info #splide02-slide02 img {
+  object-fit: revert;
 }
 .general-partner--info .splide__slide,
 .diamond-partner--info .splide__slide {

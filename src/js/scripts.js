@@ -131,7 +131,7 @@ for (var i = 0; i < elms.length; i++) {
     perMove: 1,
     gap: '20px',
     pagination: false,
-    autoplay: true,
+    autoplay: false,
   });
 
   splide.on('mounted updated move', function () {

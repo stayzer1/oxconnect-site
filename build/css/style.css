@@ -1581,8 +1581,13 @@ header {
 }
 
 .platinum-hookah-partner--info .splide__slide img {
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: revert;
+     object-fit: revert;
+}
+
+.diamond-partner--info #splide02-slide02 img {
+  -o-object-fit: revert;
+     object-fit: revert;
 }
 
 .general-partner--info .splide__slide,
