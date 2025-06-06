@@ -104,22 +104,43 @@ Object.keys(partners).forEach(partnerClass => {
         const sliderIcon = item.querySelector('.map__item--info-left-icon--slider');
         const infoBlock = item.querySelector('.map__item--info-right--info');
         const sliderBlock = item.querySelector('.map__item--info-right--slider');
-
+        const sliderClose = item.querySelector('.map__item--info-right--slider-close');
+        const changeButton = item.querySelector('.map__item--info-right-change');
+    
         if (infoIcon && sliderIcon && infoBlock && sliderBlock) {
-            infoIcon.addEventListener('click', function(e) {
-                e.stopPropagation();
+            // Функция для переключения на информацию
+            const switchToInfo = function(e) {
+                if (e) e.stopPropagation();
                 infoBlock.classList.add('map__item--info-right--info-active');
                 sliderBlock.classList.remove('map__item--info-right--slider-active');
                 infoIcon.classList.add('map__item--info-left-icon--info-active');
                 sliderIcon.classList.remove('map__item--info-left-icon--info-active');
-            });
-            sliderIcon.addEventListener('click', function(e) {
-                e.stopPropagation();
+            };
+    
+            // Функция для переключения на слайдер
+            const switchToSlider = function(e) {
+                if (e) e.stopPropagation();
                 infoBlock.classList.remove('map__item--info-right--info-active');
                 sliderBlock.classList.add('map__item--info-right--slider-active');
                 infoIcon.classList.remove('map__item--info-left-icon--info-active');
                 sliderIcon.classList.add('map__item--info-left-icon--info-active');
-            });
+            };
+    
+            // Обработчик для иконки информации
+            infoIcon.addEventListener('click', switchToInfo);
+    
+            // Обработчик для кнопки закрытия слайдера
+            if (sliderClose) {
+                sliderClose.addEventListener('click', switchToInfo);
+            }
+    
+            // Обработчик для кнопки смены
+            if (changeButton) {
+                changeButton.addEventListener('click', switchToSlider);
+            }
+    
+            // Обработчик для иконки слайдера
+            sliderIcon.addEventListener('click', switchToSlider);
         }
     });
 

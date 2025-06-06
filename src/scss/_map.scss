@@ -454,6 +454,24 @@
     }
   }
 }
+.map__item--info-right--slider-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  z-index: 10;
+}
+.map__item--info-right-change {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  width: 42px;
+  height: 31px;
+  z-index: 10;
+}
 .diamond-partner--info #splide02-slide02 img {
   object-fit: cover;
 }

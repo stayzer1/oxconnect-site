@@ -473,7 +473,7 @@ header {
 
 .hero__info--text {
   padding-top: 16px;
-  font: 500 40px/100% "Helvetica";
+  font: 500 36px/100% "Helvetica";
   letter-spacing: -0.1em;
   color: #000;
 }
@@ -1585,6 +1585,26 @@ header {
      object-fit: cover;
 }
 
+.map__item--info-right--slider-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  z-index: 10;
+}
+
+.map__item--info-right-change {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  width: 42px;
+  height: 31px;
+  z-index: 10;
+}
+
 .diamond-partner--info #splide02-slide02 img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1756,11 +1776,58 @@ footer .container {
   background-color: #fff;
 }
 
-footer img {
+footer .footer-corner-left {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+footer .footer-corner-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+footer .footer-corner-down {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.videos {
+  background-color: #cff665;
+}
+
+.videos .container {
+  background-color: #fff;
+  padding: 40px 0;
+}
+
+.videos__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.videos__item {
+  position: relative;
   width: 100%;
+  padding-bottom: 177.77%;
+  border: 2.85px solid #cff665;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.videos__item iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 .map__item {
@@ -2321,6 +2388,22 @@ footer img {
   .general-partner--info .map__item--info-right--slider {
     height: 300px;
     width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .videos__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 95%;
+  }
+
+  .videos__item {
+    padding-bottom: 111.77%;
+  }
+
+  .videos .container {
+    padding-top: 0px;
   }
 }
 

@@ -6,10 +6,20 @@ footer {
     background-color: #fff;
   }
   display: block;
-  img {
+  .footer-corner-left {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+  }
+  .footer-corner-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .footer-corner-down {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 }
