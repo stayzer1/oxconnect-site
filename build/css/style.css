@@ -679,7 +679,7 @@ header {
 
 .gallery__marquee__item-img {
   width: 350px;
-  height: 188px;
+  height: 200px;
   border: 4.14px solid #cff665;
   border-radius: 41px;
 }
@@ -954,7 +954,7 @@ header {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 178px;
+  height: 162px;
   -o-object-fit: cover;
      object-fit: cover;
   z-index: 1;
@@ -1581,13 +1581,13 @@ header {
 }
 
 .platinum-hookah-partner--info .splide__slide img {
-  -o-object-fit: revert;
-     object-fit: revert;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .diamond-partner--info #splide02-slide02 img {
-  -o-object-fit: revert;
-     object-fit: revert;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .general-partner--info .splide__slide,
