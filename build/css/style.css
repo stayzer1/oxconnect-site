@@ -428,7 +428,7 @@ header {
 }
 
 .hero {
-  margin: 20px;
+  margin: 27px;
   background-color: #cff665;
   position: relative;
   border-radius: 50px;
@@ -526,7 +526,7 @@ header {
 
 .marquee {
   overflow: hidden;
-  margin: 40px 20px;
+  margin: 40px 27px;
   background: #cff665;
 }
 
