@@ -24,3 +24,34 @@
   margin: 0 auto;
   display: block;
 }
+@media screen and (max-width: 1024px) {
+  .festival__inner--descr {
+    font-size: 18px;
+  }
+  .festival__inner--title img {
+    width: 290px;
+  }
+  .festival__title img {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .festival__inner {
+    flex-direction: column;
+  }
+  .festival__inner--title {
+    margin: 0 auto;
+  }
+  .festival__inner--descr {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+  .festival__title img {
+    max-width: 95%;
+  }
+  .festival {
+    .container {
+      padding-bottom: 40px;
+    }
+  }
+}

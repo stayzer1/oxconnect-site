@@ -44,6 +44,9 @@
   bottom: -1px;
   position: absolute;
 }
+.why__right--title.en-text {
+  padding-bottom: 8px;
+}
 .why__left__for-corner-right-up {
   transform: rotate(90deg);
   right: -1px;
@@ -133,4 +136,63 @@
   font: 500 19px / 100% "Helvetica";
   letter-spacing: -0.03em;
   color: #cff665;
+}
+@media screen and (max-width: 1024px) {
+  .why__inner {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .why {
+    margin: 10px;
+  }
+  .why__left__for--title {
+    img {
+      width: 190px;
+    }
+  }
+  .why__left--img {
+    width: 50px;
+  }
+  .why__left__for--list-item-text {
+    font-size: 14px;
+  }
+  .why__left__for--list-item,
+  .why__right--list-item {
+    img {
+      width: 10px;
+      height: 13px;
+      padding-top: 2px;
+    }
+  }
+  .why__left__info--text {
+    font-size: 14px;
+  }
+  .why__left__info--line {
+    width: 100%;
+    height: 150px;
+  }
+  .why__left__for {
+    padding: 24px 15px 15px 15px;
+  }
+  .why__left__info {
+    padding: 20px 35px 20px 15px;
+  }
+  .why__right {
+    padding: 24px 25px 25px 15px;
+  }
+  .why__right--title {
+    img {
+      width: 195px;
+    }
+  }
+  .why__right--img {
+    width: 45px;
+  }
+  .why__right--list-item-text {
+    font-size: 14px;
+  }
+  .why__inner {
+    padding-bottom: 40px;
+  }
 }

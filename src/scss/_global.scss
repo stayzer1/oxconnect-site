@@ -41,6 +41,7 @@ main {
   position: absolute;
   top: 0;
   right: 0;
+  width: 27px;
 }
 
 // Animations
@@ -52,5 +53,21 @@ main {
 
   100% {
     opacity: 1;
+  }
+}
+
+.gsap-fade-in-left,
+.gsap-fade-in-right,
+.gsap-fade-in-up {
+  opacity: 0; // чтобы не мигали до анимации
+  will-change: opacity, transform;
+}
+@media screen and (max-width: 768px) {
+  .main__line-right,
+  .main__line-left {
+    width: 10px;
+  }
+  footer {
+    display: none;
   }
 }

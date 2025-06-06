@@ -30,3 +30,24 @@
   letter-spacing: -0.03em;
   color: #cff665;
 }
+.about__item--text.en-text {
+  font-size: 25px;
+}
+@media screen and (max-width: 1024px) {
+  .about__items {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about__item {
+    max-width: 95%;
+    padding: 25px 10px 15px 15px;
+    height: 160px;
+  }
+  .about__item--title img {
+    width: 250px;
+  }
+  .about__item--text {
+    font-size: 20px;
+  }
+}

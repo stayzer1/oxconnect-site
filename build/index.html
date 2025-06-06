@@ -9,6 +9,11 @@
       href=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css "
       rel="stylesheet"
     />
+    <!-- Fancybox CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    />
     <link rel="stylesheet" href="./css/style.min.css" />
   </head>
 
@@ -27,6 +32,63 @@
     <div class="navbar">
       <ul class="menu">
         <li class="menu__item">
+          <a href="#who" class="menu__item-link" data-scroll>WHO ARE WE?</a>
+        </li>
+        <li class="menu__item">
+          <a href="#festival" class="menu__item-link" data-scroll>FESTIVAL</a>
+        </li>
+        <li class="menu__item">
+          <a href="#map" class="menu__item-link" data-scroll>MAP</a>
+        </li>
+        <li class="menu__item">
+          <a href="#price" class="menu__item-link" data-scroll>PRICE</a>
+        </li>
+        <li class="menu__item menu__dropdown">
+          <a class="menu__item-link menu__lang-toggle" data-scroll>LANG</a>
+          <ul class="menu__lang-list">
+            <li class="menu__lang-item menu__lang-item--active" data-lang="ru">
+              RU
+              <span class="menu__lang-check"
+                ><svg
+                  width="42"
+                  height="31"
+                  viewBox="0 0 42 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.7578 17.7871L17.7568 30.0312L12.2939 30.0312C12.2939 23.253 6.79224 17.7578 0.00390548 17.7578L0.00390571 12.3027C6.79224 12.3027 12.2949 6.80945 12.2949 0.0312484L17.7578 0.0312487L17.7578 12.2773L41.0234 12.2773L41.0234 17.7871L17.7578 17.7871Z"
+                    fill="#CFF665"
+                  /></svg
+              ></span>
+            </li>
+            <li class="menu__lang-item" data-lang="en">
+              EN
+              <span class="menu__lang-check">
+                <svg
+                  width="42"
+                  height="31"
+                  viewBox="0 0 42 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.7578 17.7871L17.7568 30.0312L12.2939 30.0312C12.2939 23.253 6.79224 17.7578 0.00390548 17.7578L0.00390571 12.3027C6.79224 12.3027 12.2949 6.80945 12.2949 0.0312484L17.7578 0.0312487L17.7578 12.2773L41.0234 12.2773L41.0234 17.7871L17.7578 17.7871Z"
+                    fill="#CFF665"
+                  />
+                </svg>
+              </span>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <button class="burger">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+      <nav class="mobile-menu">
+        <li class="menu__item">
           <a href="#" class="menu__item-link" data-scroll>WHO ARE WE?</a>
         </li>
         <li class="menu__item">
@@ -38,7 +100,47 @@
         <li class="menu__item">
           <a href="#" class="menu__item-link" data-scroll>PRICE</a>
         </li>
-      </ul>
+        <li class="menu__item menu__dropdown">
+          <a href="#" class="menu__item-link menu__lang-toggle" data-scroll
+            >LANG</a
+          >
+          <ul class="menu__lang-list">
+            <li class="menu__lang-item menu__lang-item--active" data-lang="ru">
+              RU
+              <span class="menu__lang-check"
+                ><svg
+                  width="42"
+                  height="31"
+                  viewBox="0 0 42 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.7578 17.7871L17.7568 30.0312L12.2939 30.0312C12.2939 23.253 6.79224 17.7578 0.00390548 17.7578L0.00390571 12.3027C6.79224 12.3027 12.2949 6.80945 12.2949 0.0312484L17.7578 0.0312487L17.7578 12.2773L41.0234 12.2773L41.0234 17.7871L17.7578 17.7871Z"
+                    fill="#CFF665"
+                  /></svg
+              ></span>
+            </li>
+            <li class="menu__lang-item" data-lang="en">
+              EN
+              <span class="menu__lang-check">
+                <svg
+                  width="42"
+                  height="31"
+                  viewBox="0 0 42 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.7578 17.7871L17.7568 30.0312L12.2939 30.0312C12.2939 23.253 6.79224 17.7578 0.00390548 17.7578L0.00390571 12.3027C6.79224 12.3027 12.2949 6.80945 12.2949 0.0312484L17.7578 0.0312487L17.7578 12.2773L41.0234 12.2773L41.0234 17.7871L17.7578 17.7871Z"
+                    fill="#CFF665"
+                  />
+                </svg>
+              </span>
+            </li>
+          </ul>
+        </li>
+      </nav>
     </div>
   </nav>
 </header>
@@ -57,11 +159,20 @@
             alt="hero-arrow-down"
           />
         </div>
-        <img class="hero__background" src="img/hero-bg.svg" alt="hero-bg" />
+        <img
+          class="hero__background hero-bg-pc"
+          src="img/hero-bg.svg"
+          alt="hero-bg"
+        />
+        <img
+          class="hero__background hero-bg-mobile"
+          src="img/hero-bg-mobile.svg"
+          alt="hero-bg"
+        />
         <img src="img/hero-back-1.svg" alt="" class="hero__background-left" />
         <img src="img/hero-back-2.svg" alt="" class="hero__background-right" />
       </section>
-      <section class="marquee">
+      <section class="marquee gsap-fade-in-up">
         <div class="marquee3k" data-speed="1">
           <div class="marquee__item">
             <img src="img/marquee-text.svg" alt="" />
@@ -69,11 +180,15 @@
           </div>
         </div>
       </section>
-      <section class="who">
+      <section class="who" id="who">
         <div class="container">
           <div class="who__inner">
-            <img class="who__inner--title" src="img/who_text.svg" alt="" />
-            <p class="who__inner--descr">
+            <img
+              class="who__inner--title gsap-fade-in-left"
+              src="img/who_text.svg"
+              alt=""
+            />
+            <p class="who__inner--descr ru-text gsap-fade-in-right">
               0xConnect — коммьюнити-ориентированный бренд, создающий уникальные
               мероприятия и являющийся центром притяжения Web3-коммьюнити.
               <br /><br />Мы создаём пространство для взаимодействия, где
@@ -87,10 +202,26 @@
               0xConnect Festival, празднику крипты, технологий, культуры и
               людей, за которыми будущее.
             </p>
+            <p class="who__inner--descr en-text gsap-fade-in-right">
+              0xConnect is a community-driven brand that creates unique events
+              and serves as a magnetic hub for the Web3 ecosystem.<br /><br />
+              We design immersive spaces for meaningful interaction — bringing
+              together investors, founders, influencers, digital creators, and
+              Web3 enthusiasts.<br /><br />
+              From intimate meetups to bold formats, we’ve been shaping the
+              cultural landscape of the new economy through authentic and
+              purposeful gatherings.<br /><br />
+              Now, we’re entering our fifth milestone — 0xConnect Festival — a
+              celebration of crypto, culture, technology, and the people shaping
+              the future.
+            </p>
           </div>
         </div>
       </section>
-      <section class="gallery" style="overflow: hidden; position: relative">
+      <section
+        class="gallery gsap-fade-in-up"
+        style="overflow: hidden; position: relative"
+      >
         <img src="img/line-white.png" alt="" class="main__line-left" />
         <img src="img/line-white.png" alt="" class="main__line-right" />
         <div class="gallery__marquee">
@@ -117,7 +248,11 @@
                   alt=""
                   class="gallery__marquee__item-corner-right-down"
                 />
-                <img src="img/right-to-left1.png" alt="" />
+                <img
+                  class="gallery__marquee__item-img"
+                  src="img/right-to-left1.png"
+                  alt=""
+                />
               </div>
               <div class="gallery__marquee--item">
                 <img
@@ -140,7 +275,11 @@
                   alt=""
                   class="gallery__marquee__item-corner-right-down"
                 />
-                <img src="img/right-to-left2.png" alt="" />
+                <img
+                  class="gallery__marquee__item-img"
+                  src="img/right-to-left2.png"
+                  alt=""
+                />
               </div>
               <div class="gallery__marquee--item">
                 <img
@@ -163,7 +302,11 @@
                   alt=""
                   class="gallery__marquee__item-corner-right-down"
                 />
-                <img src="img/right-to-left1.png" alt="" />
+                <img
+                  class="gallery__marquee__item-img"
+                  src="img/right-to-left1.png"
+                  alt=""
+                />
               </div>
               <div class="gallery__marquee--item">
                 <img
@@ -186,7 +329,11 @@
                   alt=""
                   class="gallery__marquee__item-corner-right-down"
                 />
-                <img src="img/right-to-left2.png" alt="" />
+                <img
+                  class="gallery__marquee__item-img"
+                  src="img/right-to-left2.png"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -218,7 +365,11 @@
                   alt=""
                   class="gallery__marquee__item-corner-right-down"
                 />
-                <img src="img/left-to-right1.png" alt="" />
+                <img
+                  class="gallery__marquee__item-img"
+                  src="img/left-to-right1.png"
+                  alt=""
+                />
               </div>
               <div class="gallery__marquee--item">
                 <img
@@ -241,7 +392,11 @@
                   alt=""
                   class="gallery__marquee__item-corner-right-down"
                 />
-                <img src="img/left-to-right1.png" alt="" />
+                <img
+                  class="gallery__marquee__item-img"
+                  src="img/left-to-right1.png"
+                  alt=""
+                />
               </div>
               <div class="gallery__marquee--item">
                 <img
@@ -264,7 +419,11 @@
                   alt=""
                   class="gallery__marquee__item-corner-right-down"
                 />
-                <img src="img/left-to-right1.png" alt="" />
+                <img
+                  class="gallery__marquee__item-img"
+                  src="img/left-to-right1.png"
+                  alt=""
+                />
               </div>
               <div class="gallery__marquee--item">
                 <img
@@ -287,7 +446,11 @@
                   alt=""
                   class="gallery__marquee__item-corner-right-down"
                 />
-                <img src="img/left-to-right1.png" alt="" />
+                <img
+                  class="gallery__marquee__item-img"
+                  src="img/left-to-right1.png"
+                  alt=""
+                />
               </div>
               <div class="gallery__marquee--item">
                 <img
@@ -310,7 +473,11 @@
                   alt=""
                   class="gallery__marquee__item-corner-right-down"
                 />
-                <img src="img/left-to-right1.png" alt="" />
+                <img
+                  class="gallery__marquee__item-img"
+                  src="img/left-to-right1.png"
+                  alt=""
+                />
               </div>
               <div class="gallery__marquee--item">
                 <img
@@ -333,7 +500,11 @@
                   alt=""
                   class="gallery__marquee__item-corner-right-down"
                 />
-                <img src="img/left-to-right1.png" alt="" />
+                <img
+                  class="gallery__marquee__item-img"
+                  src="img/left-to-right1.png"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -343,60 +514,93 @@
       <section class="about">
         <div class="container">
           <div class="about__items">
-            <div class="about__item">
-              <h2 class="about__item--title">
+            <div class="about__item gsap-fade-in-left">
+              <h2 class="about__item--title ru-text">
                 <img src="img/meroppriatia.svg" alt="" />
               </h2>
-              <span class="about__item--text">
+              <h2 class="about__item--title en-text">
+                <img src="img/meroppriatia-en.svg" alt="" />
+              </h2>
+              <span class="about__item--text ru-text">
                 4 масштабных официальных события (от 100 до 1500 человек)
               </span>
-            </div>
-            <div class="about__item">
-              <h2 class="about__item--title">
-                <img src="img/mln-chelovek.svg" alt="" />
-              </h2>
-              <span class="about__item--text">
-                суммарная аудитория инфлюенсеров, присутствующих и выступавших
-                на наших ивентах
+              <span class="about__item--text en-text">
+                From 100 to 1,500 attendees<br />
+                each — official, large-scale Web3 gatherings.
               </span>
             </div>
-            <div class="about__item">
+            <div class="about__item gsap-fade-in-right">
+              <h2 class="about__item--title ru-text">
+                <img src="img/mln-chelovek.svg" alt="" />
+              </h2>
+              <h2 class="about__item--title en-text">
+                <img src="img/mln-chelovek-en.svg" alt="" />
+              </h2>
+              <span class="about__item--text ru-text">
+                Суммарная аудитория инфлюенсеров, присутствующих и выступавших
+                на наших ивентах
+              </span>
+              <span class="about__item--text en-text">
+                Cumulative influencer audience present and featured at our
+                events.
+              </span>
+            </div>
+            <div class="about__item gsap-fade-in-left">
               <h2 class="about__item--title">
                 <img src="img/birzhi.svg" alt="" />
               </h2>
-              <span class="about__item--text">
-                и множество других именитых партнёров, поддерживали нас на
+              <span class="about__item--text ru-text">
+                И множество других именитых партнёров, поддерживали нас на
                 прошлых мероприятиях
               </span>
+              <span class="about__item--text en-text">
+                And many other leading industry partners who backed our past
+                initiatives
+              </span>
             </div>
-            <div class="about__item">
+            <div class="about__item gsap-fade-in-right">
               <h2 class="about__item--title">
                 <img src="img/4her.svg" alt="" />
               </h2>
-              <span class="about__item--text">
-                первый женский крипто-ивент в России, реализованный нами при
+              <span class="about__item--text ru-text">
+                Первый женский крипто-ивент в России, реализованный нами при
                 поддержке Bitget
+              </span>
+              <span class="about__item--text en-text">
+                The First Women's Web3 Event in Russia, conceptualized and
+                organized by 0xConnect in partnership with Bitget.
               </span>
             </div>
           </div>
         </div>
       </section>
-      <section class="festival">
+      <section class="festival" id="festival">
         <div class="container">
           <div class="festival__inner">
-            <div class="festival__inner--title">
+            <div class="festival__inner--title gsap-fade-in-left">
               <img src="img/festival_title.svg" alt="" />
             </div>
-            <p class="festival__inner--descr">
+            <p class="festival__inner--descr ru-text gsap-fade-in-right">
               0xConnect Festival — это первый в своём роде Web3-фестиваль в СНГ,
               который объединяет технологии, культуру и коммьюнити.<br /><br />
               Мы уходим от формата «конференции» и создаём праздник крипты —
               свободное, живое пространство, где Web3 не просто обсуждают — им
               живут. Каждый здесь — фрагмент её ДНК, её голос, её движение.
             </p>
+            <p class="festival__inner--descr en-text gsap-fade-in-right">
+              0xConnect Festival is the first Web3 festival of its kind in the
+              CIS — a space where technology, culture and community converge.<br /><br />
+              We’re moving beyond the "conference" format to create a true
+              celebration of crypto — a free, vibrant environment where Web3
+              isn’t just discussed, it’s lived. Here, everyone is a fragment of
+              its DNA, its voice, its momentum.
+            </p>
           </div>
-          <h1 class="festival__title">
+          <h1 class="festival__title ru-text gsap-fade-in-up">
             <img src="img/festival_title-main.svg" alt="" />
+          </h1>
+          <h1 class="festival__title en-text gsap-fade-in-up">
+            <img src="img/festival_title-main-en.svg" alt="" />
           </h1>
         </div>
       </section>
@@ -404,8 +608,12 @@
         <div class="container">
           <div class="why__inner">
             <div class="why__left">
-              <img src="img/for-item-img.svg" alt="" class="why__left--img" />
-              <div class="why__left__for">
+              <img
+                src="img/for-item-img.svg"
+                alt=""
+                class="why__left--img gsap-fade-in-left"
+              />
+              <div class="why__left__for gsap-fade-in-left">
                 <img
                   src="img/corner.svg"
                   alt=""
@@ -426,60 +634,87 @@
                   alt=""
                   class="why__left__for-corner-right-down"
                 />
-                <h2 class="why__left__for--title">
+                <h2 class="why__left__for--title ru-text">
                   <img src="img/why-left-title.svg" alt="" />
+                </h2>
+                <h2 class="why__left__for--title en-text">
+                  <img src="img/why-left-title-en.svg" alt="" />
                 </h2>
                 <div class="why__left__for--list">
                   <div class="why__left__for--list-item">
                     <img src="img/why-list-1.svg" alt="" />
-                    <span class="why__left__for--list-item-text">
-                      криптоэнтузиасты и инвесторы,
+                    <span class="why__left__for--list-item-text ru-text">
+                      Криптоэнтузиасты и инвесторы,
+                    </span>
+                    <span class="why__left__for--list-item-text en-text">
+                      Crypto enthusiasts and investors
                     </span>
                   </div>
                   <div class="why__left__for--list-item">
                     <img src="img/why-list-1.svg" alt="" />
-                    <span class="why__left__for--list-item-text">
-                      фаундеры и команды Web3-проектов,
+                    <span class="why__left__for--list-item-text ru-text">
+                      Фаундеры и команды Web3-проектов,
+                    </span>
+                    <span class="why__left__for--list-item-text en-text">
+                      Founders and Web3 teams
                     </span>
                   </div>
                   <div class="why__left__for--list-item">
                     <img src="img/why-list-1.svg" alt="" />
-                    <span class="why__left__for--list-item-text">
-                      дизайнеры, девелоперы, контент-криэйторы,
+                    <span class="why__left__for--list-item-text ru-text">
+                      Дизайнеры, девелоперы, контент-криэйторы,
+                    </span>
+                    <span class="why__left__for--list-item-text en-text">
+                      Designers, developers, content creators
                     </span>
                   </div>
                   <div class="why__left__for--list-item">
                     <img src="img/why-list-1.svg" alt="" />
-                    <span class="why__left__for--list-item-text">
-                      коммьюнити-лидеры и инфлюенсеры,
+                    <span class="why__left__for--list-item-text ru-text">
+                      Коммьюнити-лидеры и инфлюенсеры,
+                    </span>
+                    <span class="why__left__for--list-item-text en-text">
+                      Community leaders and influencers
                     </span>
                   </div>
                   <div class="why__left__for--list-item">
                     <img src="img/why-list-1.svg" alt="" />
-                    <span class="why__left__for--list-item-text">
-                      все, кто чувствует пульс новой цифровой культуры
+                    <span class="why__left__for--list-item-text ru-text">
+                      Все, кто чувствует пульс новой цифровой культуры
+                    </span>
+                    <span class="why__left__for--list-item-text en-text">
+                      Anyone who feels the pulse of the new digital culture
                     </span>
                   </div>
                 </div>
               </div>
-              <div class="why__left__info">
-                <span class="why__left__info--text"
+              <div class="why__left__info gsap-fade-in-left">
+                <span class="why__left__info--text ru-text"
                   >Ты не пройдёшь по локации, не познакомившись. Тут всё — повод
                   для связи.</span
                 >
-                <span class="why__left__info--text"
+                <span class="why__left__info--text en-text"
+                  >You won’t cross the venue without connecting with
+                  someone.</span
+                >
+                <span class="why__left__info--text ru-text"
                   >Это не выставка. Не форум. Это живая децентрализованная
                   культура в действии. Мы создаём место силы, где Web3
                   возвращается к своему главному активу — людям.</span
+                >
+                <span class="why__left__info--text en-text"
+                  >This isn’t an expo. Not a forum. It’s decentralized culture
+                  in motion — a power zone where Web3 comes back to its core:
+                  people.</span
                 >
               </div>
               <img
                 src="img/line-info.svg"
                 alt=""
-                class="why__left__info--line"
+                class="why__left__info--line gsap-fade-in-left"
               />
             </div>
-            <div class="why__right">
+            <div class="why__right gsap-fade-in-right">
               <img
                 src="img/corner.svg"
                 alt=""
@@ -500,54 +735,86 @@
                 alt=""
                 class="why__left__for-corner-right-down"
               />
-              <img src="img/what-be-img.svg" alt="" class="why__right--img" />
-              <h2 class="why__right--title">
+              <img
+                src="img/what-be-img.svg"
+                alt=""
+                class="why__right--img gsap-fade-in-right"
+              />
+              <h2 class="why__right--title ru-text">
                 <img src="img/why-right-title.svg" alt="" />
+              </h2>
+              <h2 class="why__right--title en-text">
+                <img src="img/why-right-title-en.svg" alt="" />
               </h2>
               <div class="why__right--list">
                 <div class="why__right--list-item">
                   <img src="img/why-list-1.svg" alt="" />
-                  <span class="why__right--list-item-text"
+                  <span class="why__right--list-item-text ru-text"
                     >Стартап-слоты: выведем на сцену новые лица Web3.
                   </span>
+                  <span class="why__right--list-item-text en-text"
+                    >Startup Spotlight: Discover the next generation of Web3
+                    projects
+                  </span>
                 </div>
                 <div class="why__right--list-item">
                   <img src="img/why-list-1.svg" alt="" />
-                  <span class="why__right--list-item-text">
+                  <span class="why__right--list-item-text ru-text">
                     Нетворк-зоны: тусовка без пиджаков,но с толком.
                   </span>
-                </div>
-                <div class="why__right--list-item">
-                  <img src="img/why-list-1.svg" alt="" />
-                  <span class="why__right--list-item-text">
-                    Живая сцена: панельные дискуссии, выступления и музыка.
+                  <span class="why__right--list-item-text en-text">
+                    Networking Zones: No suits — just meaningful connections
                   </span>
                 </div>
                 <div class="why__right--list-item">
                   <img src="img/why-list-1.svg" alt="" />
-                  <span class="why__right--list-item-text">
+                  <span class="why__right--list-item-text ru-text">
+                    Живая сцена: панельные дискуссии, выступления и музыка.
+                  </span>
+                  <span class="why__right--list-item-text en-text">
+                    Live Stage: Panels, keynotes, and performances
+                  </span>
+                </div>
+                <div class="why__right--list-item">
+                  <img src="img/why-list-1.svg" alt="" />
+                  <span class="why__right--list-item-text ru-text">
                     Арт и стиль: от тату до мерча — визуальная культура Web3 во
                     всём её многообразии.
                   </span>
+                  <span class="why__right--list-item-text en-text">
+                    Art & Style: From tattoos to merch — Web3 visual culture in
+                    full force
+                  </span>
                 </div>
                 <div class="why__right--list-item">
                   <img src="img/why-list-1.svg" alt="" />
-                  <span class="why__right--list-item-text">
+                  <span class="why__right--list-item-text ru-text">
                     Гейм и спорт: кибертурнир в Web3-стилистике, гольф и
                     шахматы.
                   </span>
-                </div>
-                <div class="why__right--list-item">
-                  <img src="img/why-list-1.svg" alt="" />
-                  <span class="why__right--list-item-text">
-                    Афтепати: музыка, свобода, Web3-family.
+                  <span class="why__right--list-item-text en-text">
+                    Games & Sport: Web3-style cyber tournament, mini-golf, and
+                    chess
                   </span>
                 </div>
                 <div class="why__right--list-item">
                   <img src="img/why-list-1.svg" alt="" />
-                  <span class="why__right--list-item-text">
+                  <span class="why__right--list-item-text ru-text">
+                    Афтепати: музыка, свобода, Web3-family.
+                  </span>
+                  <span class="why__right--list-item-text en-text">
+                    Afterparty: Music, freedom, and the Web3-family
+                  </span>
+                </div>
+                <div class="why__right--list-item">
+                  <img src="img/why-list-1.svg" alt="" />
+                  <span class="why__right--list-item-text ru-text">
                     И многое другое: атмосфера, детали и культурные коды,
                     которые поймёт каждый из Web3.
+                  </span>
+                  <span class="why__right--list-item-text en-text">
+                    And more: Atmosphere, micro-interactions, and cultural
+                    signals only true Web3 minds will catch
                   </span>
                 </div>
               </div>
@@ -555,13 +822,33 @@
           </div>
         </div>
       </section>
-      <section class="map">
+      <section class="map" id="map">
         <div class="container">
-          <h1 class="map__title">
-            <img src="img/karta.svg" alt="" /><img src="img/mp.svg" alt="" />
+          <h1 class="map__title ru-text">
+            <img class="gsap-fade-in-left" src="img/karta.svg" alt="" /><img
+              class="gsap-fade-in-right"
+              src="img/mp.svg"
+              alt=""
+            />
           </h1>
-          <img class="map__image" src="img/main-karta.png" alt="" />
-          <div class="map__items">
+          <h1 class="map__title en-text">
+            <img class="gsap-fade-in-left" src="img/karta-en.svg" alt="" /><img
+              src="img/mp-en.svg"
+              class="gsap-fade-in-right"
+              alt=""
+            />
+          </h1>
+          <img
+            class="map__image ru-text gsap-fade-in-up"
+            src="img/main-karta.png"
+            alt=""
+          />
+          <img
+            class="map__image en-text gsap-fade-in-up"
+            src="img/main-karta-en.png"
+            alt=""
+          />
+          <div class="map__items gsap-fade-in-up" id="price">
             <div class="map__item general-partner">
               <h3 class="map__item--title general-partner--title">
                 General<br />Partner
@@ -645,7 +932,12 @@
                 </div>
               </div>
               <div class="map__item--info-left--text">
-                <h3 class="map__item--info-left--text--subtitle">430 м ²</h3>
+                <h3 class="map__item--info-left--text--subtitle ru-text">
+                  430 м ²
+                </h3>
+                <h3 class="map__item--info-left--text--subtitle en-text">
+                  430 m ²
+                </h3>
                 <h3 class="map__item--info-left--text--title">30 000 $</h3>
               </div>
             </div>
@@ -666,9 +958,12 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
+                  <span class="map__item--info-right--list-item-text ru-text">
                     Центральная Lounge Zone + Стенд
                   </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Central lounge zone + branded booth
+                  </span>
                 </div>
                 <div class="map__item--info-right--list-item">
                   <svg
@@ -683,9 +978,12 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
+                  <span class="map__item--info-right--list-item-text ru-text">
                     Брендинг нативной части: бейджи, ленты, навигация
                   </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Branding on water bottles, lanyards, badges, wayfinding
+                  </span>
                 </div>
                 <div class="map__item--info-right--list-item">
                   <svg
@@ -700,9 +998,12 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
+                  <span class="map__item--info-right--list-item-text ru-text">
                     Брендинг флагов на локации + зона сцены
                   </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Flags and stage branding
+                  </span>
                 </div>
                 <div class="map__item--info-right--list-item">
                   <svg
@@ -717,9 +1018,12 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
+                  <span class="map__item--info-right--list-item-text ru-text">
                     300 мерч-футболок - вместе с 0x
                   </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Co-branded merch: 300 T-shirts
+                  </span>
                 </div>
                 <div class="map__item--info-right--list-item">
                   <svg
@@ -734,9 +1038,12 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
+                  <span class="map__item--info-right--list-item-text ru-text">
                     До 15 минут выступления
                   </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Up to 15-minute stage time
+                  </span>
                 </div>
                 <div class="map__item--info-right--list-item">
                   <svg
@@ -751,9 +1058,12 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
+                  <span class="map__item--info-right--list-item-text ru-text">
                     Брендированный фудтрак
                   </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Branded food truck
+                  </span>
                 </div>
                 <div class="map__item--info-right--list-item">
                   <svg
@@ -768,9 +1078,12 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
+                  <span class="map__item--info-right--list-item-text ru-text">
                     Массивный логотип на инсталляции
                   </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Large logo on main installation
+                  </span>
                 </div>
                 <div class="map__item--info-right--list-item">
                   <svg
@@ -785,25 +1098,11 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
+                  <span class="map__item--info-right--list-item-text ru-text">
                     Стафф в коллаборационном мерче
                   </span>
-                </div>
-                <div class="map__item--info-right--list-item">
-                  <svg
-                    width="11"
-                    height="11"
-                    viewBox="0 0 11 11"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
-                    />
-                  </svg>
-                  <span class="map__item--info-right--list-item-text">
-                    Медиа поддержка
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Staff in collaborative merch
                   </span>
                 </div>
                 <div class="map__item--info-right--list-item">
@@ -819,8 +1118,31 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text"
-                    >Видеоролик на экране до 30 секунд</span
+                  <span class="map__item--info-right--list-item-text ru-text">
+                    Медиа поддержка
+                  </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Media support
+                  </span>
+                </div>
+                <div class="map__item--info-right--list-item">
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 11 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
+                      fill="#CFF665"
+                    />
+                  </svg>
+                  <span class="map__item--info-right--list-item-text ru-text">
+                    Видеоролик на экране до 30 секунд</span
+                  >
+                  <span class="map__item--info-right--list-item-text en-text"
+                    >Up to 30-sec video on main screen</span
                   >
                 </div>
               </div>
@@ -870,13 +1192,19 @@
                 <div class="splide__track">
                   <ul class="splide__list">
                     <li class="splide__slide">
-                      <img src="img/partner-slide1.png" alt="" />
+                      <a data-fancybox="gallery1" href="img/partner-slide1.png">
+                        <img src="img/partner-slide1.png" alt="" />
+                      </a>
                     </li>
                     <li class="splide__slide">
-                      <img src="img/partner-slide1.png" alt="" />
+                      <a data-fancybox="gallery1" href="img/partner-slide1.png">
+                        <img src="img/partner-slide1.png" alt="" />
+                      </a>
                     </li>
                     <li class="splide__slide">
-                      <img src="img/partner-slide1.png" alt="" />
+                      <a data-fancybox="gallery1" href="img/partner-slide1.png">
+                        <img src="img/partner-slide1.png" alt="" />
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -941,7 +1269,12 @@
               </div>
 
               <div class="map__item--info-left--text">
-                <h3 class="map__item--info-left--text--subtitle">730 м ²</h3>
+                <h3 class="map__item--info-left--text--subtitle ru-text">
+                  730 м ²
+                </h3>
+                <h3 class="map__item--info-left--text--subtitle en-text">
+                  730 m ²
+                </h3>
                 <h3 class="map__item--info-left--text--title">20 000 $</h3>
               </div>
             </div>
@@ -962,9 +1295,12 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
+                  <span class="map__item--info-right--list-item-text ru-text">
                     Брендированный стенд + гольф-зона
                   </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Branded booth + golf zone
+                  </span>
                 </div>
                 <div class="map__item--info-right--list-item">
                   <svg
@@ -979,9 +1315,12 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
+                  <span class="map__item--info-right--list-item-text ru-text">
                     Логотип на экране главной сцены
                   </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Logo on main stage screen
+                  </span>
                 </div>
                 <div class="map__item--info-right--list-item">
                   <svg
@@ -996,9 +1335,12 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
+                  <span class="map__item--info-right--list-item-text ru-text">
                     Персонал в брендированном мерче (гольф-зона)
                   </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Staff in branded merch (golf zone)
+                  </span>
                 </div>
                 <div class="map__item--info-right--list-item">
                   <svg
@@ -1013,25 +1355,11 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
+                  <span class="map__item--info-right--list-item-text ru-text">
                     15-минутное сценическое время
                   </span>
-                </div>
-                <div class="map__item--info-right--list-item">
-                  <svg
-                    width="11"
-                    height="11"
-                    viewBox="0 0 11 11"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
-                    />
-                  </svg>
-                  <span class="map__item--info-right--list-item-text">
-                    2 настраиваемых пространства
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Up to 15-minute stage time
                   </span>
                 </div>
                 <div class="map__item--info-right--list-item">
@@ -1047,8 +1375,31 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
+                  <span class="map__item--info-right--list-item-text ru-text">
+                    2 настраиваемых пространства
+                  </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    2 customizable spaces
+                  </span>
+                </div>
+                <div class="map__item--info-right--list-item">
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 11 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
+                      fill="#CFF665"
+                    />
+                  </svg>
+                  <span class="map__item--info-right--list-item-text ru-text">
                     Медиа-поддержка
+                  </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Media support
                   </span>
                 </div>
                 <div class="map__item--info-right--list-item">
@@ -1081,8 +1432,11 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
+                  <span class="map__item--info-right--list-item-text ru-text">
                     До 30-секундного видео на главном экране
+                  </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Up to 30-sec video on main screen
                   </span>
                 </div>
                 <div class="map__item--info-right--list-item">
@@ -1098,8 +1452,11 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
+                  <span class="map__item--info-right--list-item-text ru-text">
                     Логотип на главной инсталляции
+                  </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Logo on main installation
                   </span>
                 </div>
               </div>
@@ -1149,13 +1506,19 @@
                 <div class="splide__track">
                   <ul class="splide__list">
                     <li class="splide__slide">
-                      <img src="img/partner-slide1.png" alt="" />
+                      <a data-fancybox="gallery2" href="img/partner-slide1.png">
+                        <img src="img/partner-slide1.png" alt="" />
+                      </a>
                     </li>
                     <li class="splide__slide">
-                      <img src="img/partner-slide1.png" alt="" />
+                      <a data-fancybox="gallery2" href="img/partner-slide1.png">
+                        <img src="img/partner-slide1.png" alt="" />
+                      </a>
                     </li>
                     <li class="splide__slide">
-                      <img src="img/partner-slide1.png" alt="" />
+                      <a data-fancybox="gallery2" href="img/partner-slide1.png">
+                        <img src="img/partner-slide1.png" alt="" />
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -1224,7 +1587,12 @@
               </div>
 
               <div class="map__item--info-left--text">
-                <h3 class="map__item--info-left--text--subtitle">360 м ²</h3>
+                <h3 class="map__item--info-left--text--subtitle ru-text">
+                  360 м ²
+                </h3>
+                <h3 class="map__item--info-left--text--subtitle en-text">
+                  360 m ²
+                </h3>
                 <h3 class="map__item--info-left--text--title">10 000 $</h3>
               </div>
             </div>
@@ -1245,10 +1613,13 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
+                  <span class="map__item--info-right--list-item-text ru-text">
                     Брендированные кальяны + мундштуки на заказ в цветах
                     партнеров
                   </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Branded hookahs + custom mouthpieces in partner colors
+                  </span>
                 </div>
                 <div class="map__item--info-right--list-item">
                   <svg
@@ -1263,9 +1634,12 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
+                  <span class="map__item--info-right--list-item-text ru-text">
                     Брендированная мебель для лаунжа
                   </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Branded lounge furniture
+                  </span>
                 </div>
                 <div class="map__item--info-right--list-item">
                   <svg
@@ -1280,9 +1654,12 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
+                  <span class="map__item--info-right--list-item-text ru-text">
                     15-минутное сценическое время
                   </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    15-minute stage time
+                  </span>
                 </div>
                 <div class="map__item--info-right--list-item">
                   <svg
@@ -1297,25 +1674,11 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
+                  <span class="map__item--info-right--list-item-text ru-text">
                     Брендированный бар в кальянной зоне
                   </span>
-                </div>
-                <div class="map__item--info-right--list-item">
-                  <svg
-                    width="11"
-                    height="11"
-                    viewBox="0 0 11 11"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
-                    />
-                  </svg>
-                  <span class="map__item--info-right--list-item-text">
-                    До 30-секундного видео на экране
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Branded bar in hookah area
                   </span>
                 </div>
                 <div class="map__item--info-right--list-item">
@@ -1331,8 +1694,31 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
+                  <span class="map__item--info-right--list-item-text ru-text">
+                    До 30-секундного видео на экране
+                  </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Up to 30-sec video on screen
+                  </span>
+                </div>
+                <div class="map__item--info-right--list-item">
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 11 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
+                      fill="#CFF665"
+                    />
+                  </svg>
+                  <span class="map__item--info-right--list-item-text ru-text">
                     Логотип на главной инсталляции
+                  </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Logo on main installation
                   </span>
                 </div>
               </div>
@@ -1382,13 +1768,19 @@
                 <div class="splide__track">
                   <ul class="splide__list">
                     <li class="splide__slide">
-                      <img src="img/partner-slide1.png" alt="" />
+                      <a data-fancybox="gallery3" href="img/partner-slide1.png">
+                        <img src="img/partner-slide1.png" alt="" />
+                      </a>
                     </li>
                     <li class="splide__slide">
-                      <img src="img/partner-slide1.png" alt="" />
+                      <a data-fancybox="gallery3" href="img/partner-slide1.png">
+                        <img src="img/partner-slide1.png" alt="" />
+                      </a>
                     </li>
                     <li class="splide__slide">
-                      <img src="img/partner-slide1.png" alt="" />
+                      <a data-fancybox="gallery3" href="img/partner-slide1.png">
+                        <img src="img/partner-slide1.png" alt="" />
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -1455,7 +1847,12 @@
                 </div>
               </div>
               <div class="map__item--info-left--text">
-                <h3 class="map__item--info-left--text--subtitle">250 м ²</h3>
+                <h3 class="map__item--info-left--text--subtitle ru-text">
+                  250 м ²
+                </h3>
+                <h3 class="map__item--info-left--text--subtitle en-text">
+                  250 m ²
+                </h3>
                 <h3 class="map__item--info-left--text--title">15 000 $</h3>
               </div>
             </div>
@@ -1476,9 +1873,12 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
+                  <span class="map__item--info-right--list-item-text ru-text">
                     Брендирование зоны открытой террасы
                   </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Branding of outdoor terrace zone
+                  </span>
                 </div>
                 <div class="map__item--info-right--list-item">
                   <svg
@@ -1493,9 +1893,12 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
+                  <span class="map__item--info-right--list-item-text ru-text">
                     Свободная планировка/настройка декора
                   </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Free layout/decor setup
+                  </span>
                 </div>
                 <div class="map__item--info-right--list-item">
                   <svg
@@ -1510,9 +1913,12 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
+                  <span class="map__item--info-right--list-item-text ru-text">
                     Логотип на основной инсталляции
                   </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Logo on main installation
+                  </span>
                 </div>
                 <div class="map__item--info-right--list-item">
                   <svg
@@ -1527,25 +1933,11 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
+                  <span class="map__item--info-right--list-item-text ru-text">
                     До 30-секундного видео на экране
                   </span>
-                </div>
-                <div class="map__item--info-right--list-item">
-                  <svg
-                    width="11"
-                    height="11"
-                    viewBox="0 0 11 11"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
-                    />
-                  </svg>
-                  <span class="map__item--info-right--list-item-text">
-                    15-минутное сценическое время
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Up to 30-sec video on screen
                   </span>
                 </div>
                 <div class="map__item--info-right--list-item">
@@ -1561,8 +1953,31 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
+                  <span class="map__item--info-right--list-item-text ru-text">
+                    15-минутное сценическое время
+                  </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    15-minute stage time
+                  </span>
+                </div>
+                <div class="map__item--info-right--list-item">
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 11 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
+                      fill="#CFF665"
+                    />
+                  </svg>
+                  <span class="map__item--info-right--list-item-text ru-text">
                     Медиа-поддержка
+                  </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Media support
                   </span>
                 </div>
               </div>
@@ -1612,13 +2027,19 @@
                 <div class="splide__track">
                   <ul class="splide__list">
                     <li class="splide__slide">
-                      <img src="img/partner-slide1.png" alt="" />
+                      <a data-fancybox="gallery4" href="img/partner-slide1.png">
+                        <img src="img/partner-slide1.png" alt="" />
+                      </a>
                     </li>
                     <li class="splide__slide">
-                      <img src="img/partner-slide1.png" alt="" />
+                      <a data-fancybox="gallery4" href="img/partner-slide1.png">
+                        <img src="img/partner-slide1.png" alt="" />
+                      </a>
                     </li>
                     <li class="splide__slide">
-                      <img src="img/partner-slide1.png" alt="" />
+                      <a data-fancybox="gallery4" href="img/partner-slide1.png">
+                        <img src="img/partner-slide1.png" alt="" />
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -1686,7 +2107,12 @@
                   </div>
                 </div>
                 <div class="map__item--info-left--text">
-                  <h3 class="map__item--info-left--text--subtitle">25 м ²</h3>
+                  <h3 class="map__item--info-left--text--subtitle ru-text">
+                    25 м ²
+                  </h3>
+                  <h3 class="map__item--info-left--text--subtitle en-text">
+                    25 m ²
+                  </h3>
                   <h3 class="map__item--info-left--text--title">6 500 $</h3>
                 </div>
               </div>
@@ -1715,25 +2141,11 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
+                  <span class="map__item--info-right--list-item-text ru-text">
                     Брендирование зоны открытой террасы
                   </span>
-                </div>
-                <div class="map__item--info-right--list-item">
-                  <svg
-                    width="11"
-                    height="11"
-                    viewBox="0 0 11 11"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M10.6073 8.94818L9.04004 10.5155C7.09251 8.56793 3.93529 8.56761 1.98778 10.5151L0.420491 8.94784C2.368 7.00033 2.36832 3.84311 0.420809 1.8956L1.9881 0.32831C3.93561 2.27582 7.09282 2.27614 9.04036 0.328601L10.6076 1.89589C8.66011 3.84342 8.65979 7.00064 10.6073 8.94818Z"
-                      fill="#CFF665"
-                    />
-                  </svg>
-                  <span class="map__item--info-right--list-item-text">
-                    Свободная планировка/настройка декора
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Branding of outdoor terrace zone
                   </span>
                 </div>
                 <div class="map__item--info-right--list-item">
@@ -1749,8 +2161,11 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
-                    Логотип на основной инсталляции
+                  <span class="map__item--info-right--list-item-text ru-text">
+                    Медиа-партнерство на сайте
+                  </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Media partnership on website
                   </span>
                 </div>
                 <div class="map__item--info-right--list-item">
@@ -1766,8 +2181,11 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
-                    До 30-секундного видео на экране
+                  <span class="map__item--info-right--list-item-text ru-text">
+                    10-минутное сценическое время
+                  </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    10-minute stage time
                   </span>
                 </div>
                 <div class="map__item--info-right--list-item">
@@ -1783,8 +2201,11 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
-                    15-минутное сценическое время
+                  <span class="map__item--info-right--list-item-text ru-text">
+                    Возможность запустить собственную механику вовлечения
+                  </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    Ability to run your own engagement mechanic
                   </span>
                 </div>
                 <div class="map__item--info-right--list-item">
@@ -1800,8 +2221,11 @@
                       fill="#CFF665"
                     />
                   </svg>
-                  <span class="map__item--info-right--list-item-text">
-                    Медиа-поддержка
+                  <span class="map__item--info-right--list-item-text ru-text">
+                    На экране поддержка СМИ
+                  </span>
+                  <span class="map__item--info-right--list-item-text en-text">
+                    On-screen media support
                   </span>
                 </div>
               </div>
@@ -1851,13 +2275,19 @@
                 <div class="splide__track">
                   <ul class="splide__list">
                     <li class="splide__slide">
-                      <img src="img/partner-slide1.png" alt="" />
+                      <a data-fancybox="gallery5" href="img/partner-slide1.png">
+                        <img src="img/partner-slide1.png" alt="" />
+                      </a>
                     </li>
                     <li class="splide__slide">
-                      <img src="img/partner-slide1.png" alt="" />
+                      <a data-fancybox="gallery5" href="img/partner-slide1.png">
+                        <img src="img/partner-slide1.png" alt="" />
+                      </a>
                     </li>
                     <li class="splide__slide">
-                      <img src="img/partner-slide1.png" alt="" />
+                      <a data-fancybox="gallery5" href="img/partner-slide1.png">
+                        <img src="img/partner-slide1.png" alt="" />
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -1927,6 +2357,10 @@
     <!-- Footer -->
     
   </body>
+  <!-- Fancybox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js "></script>
   <script src="https://unpkg.com/marquee3000"></script>
   <script>

@@ -3,59 +3,98 @@
 
 // Партнеры анимация
 document.addEventListener('DOMContentLoaded', function() {
-    const partners = {
-        'general-partner': 'general-partner--info',
-        'diamond-partner': 'diamond-partner--info',
-        'platinum-hookah-partner': 'platinum-hookah-partner--info',
-        'platinum-terrace-partner': 'platinum-terrace-partner--info',
-        'gold-partner': 'gold-partner--info'
-    };
+  const partners = {
+    'general-partner': 'general-partner--info',
+    'diamond-partner': 'diamond-partner--info',
+    'platinum-hookah-partner': 'platinum-hookah-partner--info',
+    'platinum-terrace-partner': 'platinum-terrace-partner--info',
+    'gold-partner': 'gold-partner--info'
+};
 
-    // Устанавливаем начальную ширину для всех партнеров
+function setPartnerStyles() {
+    const isMobile = window.innerWidth < 768;
     Object.keys(partners).forEach(partnerClass => {
         const partnerElement = document.querySelector(`.${partnerClass}`);
         if (partnerElement) {
-            partnerElement.style.width = '180px';
+            if (isMobile) {
+                partnerElement.style.width = '100%';
+                partnerElement.style.height = '80px';
+            } else {
+                partnerElement.style.width = '180px';
+                partnerElement.style.height = '';
+            }
         }
     });
+}
 
-    // Добавляем обработчики кликов для каждого партнера
-    Object.keys(partners).forEach(partnerClass => {
-        const partnerElement = document.querySelector(`.${partnerClass}`);
-        const infoElement = document.querySelector(`.${partners[partnerClass]}`);
+// Вызываем при загрузке
+setPartnerStyles();
 
-        if (partnerElement && infoElement) {
-            partnerElement.addEventListener('click', () => {
-                // Закрываем все открытые блоки
-                Object.values(partners).forEach(infoClass => {
-                    const info = document.querySelector(`.${infoClass}`);
-                    if (info) {
-                        info.style.display = 'none';
-                        info.style.opacity = '0';
-                    }
-                });
+// И при изменении размера окна
+window.addEventListener('resize', setPartnerStyles);
 
-                // Убираем активный класс и устанавливаем ширину 156px у всех партнеров
-                Object.keys(partners).forEach(pClass => {
-                    const p = document.querySelector(`.${pClass}`);
-                    if (p) {
-                        p.classList.remove(`${pClass}-active`);
-                        p.style.width = '156px';
-                    }
-                });
+// Обработчики кликов
+Object.keys(partners).forEach(partnerClass => {
+    const partnerElement = document.querySelector(`.${partnerClass}`);
+    const infoElement = document.querySelector(`.${partners[partnerClass]}`);
 
-                // Показываем нужный блок с анимацией
-                infoElement.style.display = 'flex';
-                setTimeout(() => {
-                    infoElement.style.opacity = '1';
-                }, 10);
-
-                // Добавляем активный класс и устанавливаем ширину 280px
-                partnerElement.classList.add(`${partnerClass}-active`);
-                partnerElement.style.width = '280px';
+    if (partnerElement && infoElement) {
+        partnerElement.addEventListener('click', () => {
+            Object.values(partners).forEach(infoClass => {
+                const info = document.querySelector(`.${infoClass}`);
+                if (info) {
+                    info.style.display = 'none';
+                    info.style.opacity = '0';
+                }
             });
+
+            Object.keys(partners).forEach(pClass => {
+                const p = document.querySelector(`.${pClass}`);
+                if (p) {
+                    p.classList.remove(`${pClass}-active`);
+                    if (window.innerWidth < 768) {
+                        p.style.height = '80px';
+                    } else {
+                        p.style.width = '156px';
+                        p.style.height = '';
+                    }
+                }
+            });
+
+            infoElement.style.display = 'flex';
+            setTimeout(() => {
+                infoElement.style.opacity = '1';
+            }, 10);
+
+            partnerElement.classList.add(`${partnerClass}-active`);
+            if (window.innerWidth < 768) {
+                partnerElement.style.height = '130px';
+            } else {
+                partnerElement.style.width = '280px';
+            }
+        });
+    }
+});
+
+(function() {
+    const burger = document.querySelector('.burger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+  
+    if (burger && mobileMenu) {
+      burger.addEventListener('click', function() {
+        burger.classList.toggle('open');
+        mobileMenu.classList.toggle('open');
+      });
+  
+      // Закрытие меню по клику вне или по ссылке
+      mobileMenu.addEventListener('click', function(e) {
+        if (e.target.classList.contains('mobile-menu')) {
+          burger.classList.remove('open');
+          mobileMenu.classList.remove('open');
         }
-    });
+      });
+    }
+  })();
 
 
     // Переключение между info и slider с активными иконками
@@ -154,4 +193,138 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    // Языковое меню
+(function() {
+    // Для всех выпадающих меню на странице (десктоп и мобильное)
+    document.querySelectorAll('.menu__dropdown').forEach(function(dropdown) {
+      const toggle = dropdown.querySelector('.menu__lang-toggle');
+      const langList = dropdown.querySelector('.menu__lang-list');
+      const langItems = dropdown.querySelectorAll('.menu__lang-item');
+  
+      // Открытие/закрытие выпадающего меню
+      if (toggle && langList) {
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          dropdown.classList.toggle('menu__dropdown--open');
+        });
+        document.addEventListener('click', function(e) {
+          if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove('menu__dropdown--open');
+          }
+        });
+      }
+  
+      // Смена языка
+      langItems.forEach(function(item) {
+        item.addEventListener('click', function() {
+          // Снимаем активность у всех языков в этом меню
+          langItems.forEach(function(i) {
+            i.classList.remove('menu__lang-item--active');
+          });
+          item.classList.add('menu__lang-item--active');
+  
+          // Синхронизируем оба меню
+          const lang = item.getAttribute('data-lang');
+          document.querySelectorAll('.menu__lang-item').forEach(function(i) {
+            if (i.getAttribute('data-lang') === lang) {
+              i.classList.add('menu__lang-item--active');
+            } else {
+              i.classList.remove('menu__lang-item--active');
+            }
+          });
+  
+          // Показываем нужный язык
+          if (lang === 'ru') {
+            document.querySelectorAll('.ru-text').forEach(function(el) {
+              el.style.display = 'flex';
+            });
+            document.querySelectorAll('.en-text').forEach(function(el) {
+              el.style.display = 'none';
+            });
+          } else if (lang === 'en') {
+            document.querySelectorAll('.ru-text').forEach(function(el) {
+              el.style.display = 'none';
+            });
+            document.querySelectorAll('.en-text').forEach(function(el) {
+              el.style.display = 'flex';
+            });
+          }
+        });
+      });
+    });
+  
+    // По умолчанию RU
+    document.querySelectorAll('.ru-text').forEach(function(el) {
+      el.style.display = 'flex';
+    });
+    document.querySelectorAll('.en-text').forEach(function(el) {
+      el.style.display = 'none';
+    });
+  })();
+
+  const smoothLinks = document.querySelectorAll('a[href^="#"]');
+    for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        const id = smoothLink.getAttribute("href");
+
+        document.querySelector(id).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        });
+    });
+    }
+
+    
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Регистрируем ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+  
+    // Слева направо
+    document.querySelectorAll('.gsap-fade-in-left').forEach(el => {
+      gsap.fromTo(el, 
+        {opacity: 0, x: -60}, 
+        {
+          opacity: 1, x: 0, duration: 0.7, ease: "power2.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%", // когда верх элемента доходит до 85% окна
+            toggleActions: "play none none none"
+          }
+        }
+      );
+    });
+  
+    // Справа налево
+    document.querySelectorAll('.gsap-fade-in-right').forEach(el => {
+      gsap.fromTo(el, 
+        {opacity: 0, x: 60}, 
+        {
+          opacity: 1, x: 0, duration: 0.7, ease: "power2.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+            toggleActions: "play none none none"
+          }
+        }
+      );
+    });
+  
+    // Снизу вверх
+    document.querySelectorAll('.gsap-fade-in-up').forEach(el => {
+      gsap.fromTo(el, 
+        {opacity: 0, y: 60}, 
+        {
+          opacity: 1, y: 0, duration: 0.7, ease: "power2.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+            toggleActions: "play none none none"
+          }
+        }
+      );
+    });
+  });

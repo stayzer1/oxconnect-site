@@ -13,6 +13,7 @@
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
+  visibility: hidden;
   z-index: 1000;
 }
 .general-partner-modal__inner,
@@ -35,6 +36,7 @@
 .platinum-terrace-partner-modal--images,
 .gold-partner-modal--images {
   position: absolute;
+
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -85,7 +87,7 @@
 .gold-partner-modal--active {
   opacity: 1;
   pointer-events: auto;
-
+  visibility: visible;
   .general-partner-modal__inner,
   .diamond-partner-modal__inner,
   .platinum-hookah-partner-modal__inner,

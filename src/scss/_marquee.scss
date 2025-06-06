@@ -18,3 +18,11 @@
 
   margin-right: 30px;
 }
+@media screen and (max-width: 1024px) {
+  .marquee__item {
+    gap: 15px;
+    img {
+      height: 50px;
+    }
+  }
+}
