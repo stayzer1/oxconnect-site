@@ -1554,7 +1554,9 @@ header {
   padding: 15px 90px 15px 27px;
 }
 
-.gold-partner--info .map__item--info-right {
+.gold-partner--info .map__item--info-right,
+.gold-partner--info .map__item--info-right--slider,
+.gold-partner--info .splide__slide {
   height: 522px;
 }
 
@@ -1576,6 +1578,11 @@ header {
      object-fit: cover;
   /* или contain, если нужно вписать полностью */
   display: block;
+}
+
+.platinum-hookah-partner--info .splide__slide img {
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .general-partner--info .splide__slide,

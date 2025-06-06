@@ -427,7 +427,9 @@
 .gold-partner--info .map__item--info-left-lower {
   padding: 15px 90px 15px 27px;
 }
-.gold-partner--info .map__item--info-right {
+.gold-partner--info .map__item--info-right,
+.gold-partner--info .map__item--info-right--slider,
+.gold-partner--info .splide__slide {
   height: 522px;
 }
 .splide__slide {
@@ -443,6 +445,13 @@
     height: 100%;
     object-fit: cover; /* или contain, если нужно вписать полностью */
     display: block;
+  }
+}
+.platinum-hookah-partner--info {
+  .splide__slide {
+    img {
+      object-fit: fill;
+    }
   }
 }
 .general-partner--info .splide__slide,

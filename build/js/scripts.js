@@ -123,19 +123,32 @@ Object.keys(partners).forEach(partnerClass => {
         }
     });
 
-    var elms = document.getElementsByClassName( 'splide' );
+    var elms = document.getElementsByClassName('splide');
 
-    for ( var i = 0; i < elms.length; i++ ) {
-      new Splide( elms[ i ], {
-        type: 'loop',
-        perPage: 1,
-        perMove: 1,
-        gap: '20px',
-        pagination: false,
-        autoplay: true,
-      } ).mount();
+for (var i = 0; i < elms.length; i++) {
+  var splide = new Splide(elms[i], {
+    // type: 'loop',
+    perPage: 1,
+    perMove: 1,
+    gap: '20px',
+    pagination: false,
+    autoplay: true,
+  });
+
+  splide.on('mounted updated move', function () {
+    // Удаляем data-fancybox у клонов
+    document.querySelectorAll('.splide__slide.is-clone [data-fancybox]').forEach(el => {
+      el.removeAttribute('data-fancybox');
+    });
+  });
+
+  splide.mount();
 }
 
+// Инициализируем Fancybox только на оригинальных
+Fancybox.bind('.splide__slide:not(.is-clone) [data-fancybox="gallery5"]', {
+  // ваши опции
+});
     // Маппинг иконок и модалок
     const modalMap = [
         {
