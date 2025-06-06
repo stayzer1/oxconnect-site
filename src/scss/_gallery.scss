@@ -25,7 +25,7 @@
 .gallery__marquee--items {
   display: inline-flex !important;
   align-items: center;
-  gap: 19px;
+  gap: 15px;
 }
 .gallery__marquee--item {
   position: relative;
@@ -53,7 +53,7 @@
   bottom: 0;
 }
 .gallery__marquee--items {
-  padding-left: 10px;
+  padding-left: 15px;
 }
 @media screen and (max-width: 1024px) {
   .gallery__marquee--item {

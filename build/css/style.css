@@ -561,7 +561,7 @@ header {
 }
 
 .who {
-  margin-top: clamp(2.5rem, 2.036rem + 1.905vw, 3.75rem);
+  margin-top: 20px;
   background-color: #cff665;
 }
 
@@ -636,7 +636,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 19px;
+  gap: 15px;
 }
 
 .gallery__marquee--item {
@@ -674,7 +674,7 @@ header {
 }
 
 .gallery__marquee--items {
-  padding-left: 10px;
+  padding-left: 15px;
 }
 
 .about {
@@ -1207,13 +1207,29 @@ header {
   height: 456px;
 }
 
+.general-partner--info .map__item--info-right--info,
+.general-partner--info .map__item--info-left {
+  height: 522px;
+}
+
+.general-partner--info .map__item--info-left-icons {
+  padding-bottom: 0;
+  margin-bottom: auto;
+}
+
 .diamond-partner--info .map__item--info-left--text--title,
 .diamond-partner--info .map__item--info-left--title {
   color: #51e7d0;
 }
 
-.diamond-partner--info .map__item--info-right {
-  height: 454px;
+.diamond-partner--info .map__item--info-right,
+.diamond-partner--info .map__item--info-left {
+  height: 522px;
+}
+
+.diamond-partner--info .map__item--info-left-icons {
+  padding-bottom: 0px;
+  margin-bottom: auto;
 }
 
 .diamond-partner--info .map__item--info-left-icon:hover svg path {
@@ -1525,6 +1541,14 @@ header {
   bottom: 10px;
   width: 30px;
   height: 42px;
+}
+
+.gold-partner--info .map__item--info-left-lower {
+  padding: 15px 90px 15px 27px;
+}
+
+.gold-partner--info .map__item--info-right {
+  height: 522px;
 }
 
 .general-partner-modal,
