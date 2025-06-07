@@ -17,7 +17,7 @@
   &__item {
     position: relative;
     width: 100%;
-    padding-bottom: 177.77%; // Соотношение сторон 9:16 для вертикальных видео
+    padding-bottom: 175.77%; // Соотношение сторон 9:16 для вертикальных видео
     border: 2.85px solid #cff665;
     border-radius: 28px;
     overflow: hidden;
@@ -39,6 +39,10 @@
       grid-template-columns: 1fr;
       gap: 20px;
       max-width: 95%;
+    }
+    &__item {
+      width: 236px;
+      margin: 0 auto;
     }
   }
   .videos__item {

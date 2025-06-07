@@ -1847,7 +1847,7 @@ footer .footer-corner-down {
 .videos__item {
   position: relative;
   width: 100%;
-  padding-bottom: 177.77%;
+  padding-bottom: 175.77%;
   border: 2.85px solid #cff665;
   border-radius: 28px;
   overflow: hidden;
@@ -2431,6 +2431,11 @@ footer .footer-corner-down {
     grid-template-columns: 1fr;
     gap: 20px;
     max-width: 95%;
+  }
+
+  .videos__item {
+    width: 236px;
+    margin: 0 auto;
   }
 
   .videos__item {
