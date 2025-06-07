@@ -130,10 +130,10 @@
               We design immersive spaces for meaningful interaction — bringing
               together investors, founders, influencers, digital creators, and
               Web3 enthusiasts.<br /><br />
-              From intimate meetups to bold formats, we’ve been shaping the
+              From intimate meetups to bold formats, we've been shaping the
               cultural landscape of the new economy through authentic and
               purposeful gatherings.<br /><br />
-              Now, we’re entering our fifth milestone — 0xConnect Festival — a
+              Now, we're entering our fifth milestone — 0xConnect Festival — a
               celebration of crypto, culture, technology, and the people shaping
               the future.
             </p>
@@ -712,9 +712,9 @@
             <p class="festival__inner--descr en-text gsap-fade-in-right">
               0xConnect Festival is the first Web3 festival of its kind in the
               CIS — a space where technology, culture and community converge.<br /><br />
-              We’re moving beyond the "conference" format to create a true
+              We're moving beyond the "conference" format to create a true
               celebration of crypto — a free, vibrant environment where Web3
-              isn’t just discussed, it’s lived. Here, everyone is a fragment of
+              isn't just discussed, it's lived. Here, everyone is a fragment of
               its DNA, its voice, its momentum.
             </p>
           </div>
@@ -766,6 +766,15 @@
                   <div class="why__left__for--list-item">
                     <img src="img/why-list-1.svg" alt="" />
                     <span class="why__left__for--list-item-text ru-text">
+                      Трейдеры, дефи-эйперы, мемкоин-флиперы
+                    </span>
+                    <span class="why__left__for--list-item-text en-text">
+                      Traders, DeFi apers, and meme flippers
+                    </span>
+                  </div>
+                  <div class="why__left__for--list-item">
+                    <img src="img/why-list-1.svg" alt="" />
+                    <span class="why__left__for--list-item-text ru-text">
                       Криптоэнтузиасты и инвесторы,
                     </span>
                     <span class="why__left__for--list-item-text en-text">
@@ -784,10 +793,19 @@
                   <div class="why__left__for--list-item">
                     <img src="img/why-list-1.svg" alt="" />
                     <span class="why__left__for--list-item-text ru-text">
-                      Дизайнеры, девелоперы, контент-криэйторы,
+                      Девелоперы, билдэры и Web3 инженеры
                     </span>
                     <span class="why__left__for--list-item-text en-text">
-                      Designers, developers, content creators
+                      Developers, builders, and Web3 engineers
+                    </span>
+                  </div>
+                  <div class="why__left__for--list-item">
+                    <img src="img/why-list-1.svg" alt="" />
+                    <span class="why__left__for--list-item-text ru-text">
+                      Дизайнеры и контент-криэйторы,
+                    </span>
+                    <span class="why__left__for--list-item-text en-text">
+                      Designers and content creators
                     </span>
                   </div>
                   <div class="why__left__for--list-item">
@@ -797,6 +815,15 @@
                     </span>
                     <span class="why__left__for--list-item-text en-text">
                       Community leaders and influencers
+                    </span>
+                  </div>
+                  <div class="why__left__for--list-item">
+                    <img src="img/why-list-1.svg" alt="" />
+                    <span class="why__left__for--list-item-text ru-text">
+                      Дегены, нодраннеры, ретрохантеры и все, кто до сих пор в тренчах
+                    </span>
+                    <span class="why__left__for--list-item-text en-text">
+                      Degens, node runners, retro hunters, and everyone still in the trenches
                     </span>
                   </div>
                   <div class="why__left__for--list-item">
@@ -816,7 +843,7 @@
                   для связи.</span
                 >
                 <span class="why__left__info--text en-text"
-                  >You won’t cross the venue without connecting with
+                  >You won't cross the venue without connecting with
                   someone.</span
                 >
                 <span class="why__left__info--text ru-text"
@@ -825,7 +852,7 @@
                   возвращается к своему главному активу — людям.</span
                 >
                 <span class="why__left__info--text en-text"
-                  >This isn’t an expo. Not a forum. It’s decentralized culture
+                  >This isn't an expo. Not a forum. It's decentralized culture
                   in motion — a power zone where Web3 comes back to its core:
                   people.</span
                 >
@@ -949,7 +976,7 @@
                 для связи.</span
               >
               <span class="why__left__info--text en-text"
-                >You won’t cross the venue without connecting with
+                >You won't cross the venue without connecting with
                 someone.</span
               >
               <span class="why__left__info--text ru-text"
@@ -958,7 +985,7 @@
                 возвращается к своему главному активу — людям.</span
               >
               <span class="why__left__info--text en-text"
-                >This isn’t an expo. Not a forum. It’s decentralized culture in
+                >This isn't an expo. Not a forum. It's decentralized culture in
                 motion — a power zone where Web3 comes back to its core:
                 people.</span
               >
@@ -2657,7 +2684,16 @@
   <script src="https://unpkg.com/marquee3000"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      Marquee3k.init();
+      Marquee3k.init({
+        selector: 'marquee3k',
+        speed: 0.5,
+        pausable: true,
+        reverse: false,
+        duplicated: true,
+        smooth: true,
+        delay: 0,
+        gap: 0
+      });
     });
   </script>
   <script src="./js/scripts.min.js"></script>

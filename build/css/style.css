@@ -528,6 +528,13 @@ header {
   overflow: hidden;
   margin: 40px 27px;
   background: #cff665;
+  will-change: transform;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-perspective: 1000;
+          perspective: 1000;
 }
 
 .marquee3k__wrapper {
@@ -540,6 +547,23 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  will-change: transform;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-perspective: 1000;
+          perspective: 1000;
+}
+
+.marquee3k {
+  will-change: transform;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-perspective: 1000;
+          perspective: 1000;
 }
 
 .marquee__item {
@@ -558,6 +582,13 @@ header {
 
 .marquee__item img {
   height: 50px;
+  will-change: transform;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-perspective: 1000;
+          perspective: 1000;
 }
 
 .who {
@@ -973,6 +1004,7 @@ header {
   padding: 24px 34px 45px 33px;
   position: relative;
   border: 2.85px solid #cff665;
+  height: 594px;
 }
 
 .why__right--title {
@@ -2230,6 +2262,9 @@ footer .footer-corner-down {
 
   .why__right {
     padding: 24px 25px 25px 15px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
 
   .why__right--title img {

@@ -2,19 +2,35 @@
   overflow: hidden;
   margin: 40px 27px;
   background: #cff665;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
 }
 .marquee3k__wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
 }
 .marquee3k {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
 }
 .marquee__item {
   display: inline-flex !important;
   gap: 15px;
   img {
     height: 50px;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000;
   }
   justify-content: center;
   align-items: center;
